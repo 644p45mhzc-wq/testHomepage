@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenMOSSLab | Open Model Systems & Society Lab</title>
+  <meta name="description" content="OpenMOSSLab advances open model systems for language, multimodal understanding, and embodied intelligence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-gO9FwZP1781OeR3SiPtK0aGpG99nmHn7+O+kO5RAwOB1p5MNDoAuCEi0aKBslZx2drXr/7L0KleKX2ND/qY1KQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a class="brand" href="#top">
+        <img class="brand-logo" src="assets/img/openmoss-logo.png" alt="OpenMOSSLab logo">
+        <span class="brand-name">OpenMOSSLab</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="#about">About</a></li>
+        <li><a href="#pillars">Research</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#people">People</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#join">Join</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Open Model Systems &amp; Society Lab</p>
+        <h1>Building trustworthy, open foundation models that serve society.</h1>
+        <p class="lead">Led by Prof. <span class="highlight">Xipeng Qiu</span>, OpenMOSSLab advances large-scale AI systems spanning language, multimodal intelligence, and embodied agents. We design open-source models, tools, and theory that ground AI in real-world impact.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#join">Work With Us</a>
+          <a class="btn btn-outline" href="#highlights">Latest Highlights</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-panel">
+          <h2>What We Focus On</h2>
+          <ul>
+            <li><span>Open-source foundation models</span></li>
+            <li><span>Multimodal learning &amp; reasoning</span></li>
+            <li><span>Embodied intelligence &amp; agents</span></li>
+            <li><span>Responsible, safe deployment</span></li>
+          </ul>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <h3>160+</h3>
+            <p>Publications across NeurIPS, ICML, ACL, EMNLP, CVPR, ICCV</p>
+          </div>
+          <div>
+            <h3>30+</h3>
+            <p>Open-source releases including MOSS, FastNLP, CoLLiE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="container sec">
+      <h2>About The Lab</h2>
+      <p>OpenMOSSLab, originally part of the FudanNLP group at Fudan University, pioneers open and responsible AI research. Our mission is to advance the theory, methods, and applications of large-scale AI systems—from pretraining and reasoning to multimodal and embodied intelligence—while ensuring tangible societal impact.</p>
+      <p>We collaborate with global research partners and industry leaders to translate foundational advances into deployable systems. Alumni continue at top-tier universities (MIT, UC Berkeley, CMU) and companies (ByteDance, Alibaba, AWS, Optiver), and many have launched startups or taken faculty roles.</p>
+    </section>
+
+    <div class="sechighlight" id="pillars">
+      <section class="container sec">
+        <h2>Research Pillars</h2>
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <h3>AI Infrastructure</h3>
+            <p>Optimizers, fine-tuning frameworks, and inference scaling that keep open models efficient, robust, and accessible.</p>
+            <ul>
+              <li>LOMO, AdaLomo optimizers</li>
+              <li>CoLLiE: collaborative fine-tuning</li>
+              <li>Large-scale training pipelines</li>
+            </ul>
+          </article>
+          <article class="pillar-card">
+            <h3>Multimodal Foundation Models</h3>
+            <p>Unified models spanning speech, vision, and language for grounded understanding and reasoning.</p>
+            <ul>
+              <li>SpeechGPT, SpeechTokenizer</li>
+              <li>AnyGPT, Visuothink, UnifiedVisual</li>
+              <li>Alignment across modalities</li>
+            </ul>
+          </article>
+          <article class="pillar-card">
+            <h3>Reasoning &amp; Agents</h3>
+            <p>Large language model agents that plan, reason, and interact safely with humans and tools.</p>
+            <ul>
+              <li>Exchange-of-Thought dialogue agents</li>
+              <li>ConvSearch-R1 for retrieval-augmented reasoning</li>
+              <li>Tool-augmented workflows</li>
+            </ul>
+          </article>
+          <article class="pillar-card">
+            <h3>Embodied &amp; Interactive AI</h3>
+            <p>Vision-language-action systems and simulators that connect models to physical environments.</p>
+            <ul>
+              <li>VLA-bench, D²PO</li>
+              <li>VehicleWorld simulation</li>
+              <li>Task-centric embodied planning</li>
+            </ul>
+          </article>
+          <article class="pillar-card">
+            <h3>Model Safety &amp; Interpretability</h3>
+            <p>Transparency, evaluation, and governance frameworks for responsible open model deployment.</p>
+            <ul>
+              <li>Attention decomposition analysis</li>
+              <li>Bias and robustness evaluations</li>
+              <li>Values-aligned post-training</li>
+            </ul>
+          </article>
+          <article class="pillar-card">
+            <h3>New Architectures</h3>
+            <p>Diffusion-based LLMs, long-context modeling, and memory-efficient transformers for next-generation systems.</p>
+            <ul>
+              <li>Sparse-dLLM, LongLLaDA</li>
+              <li>LongWanjuan, LongSafety</li>
+              <li>Adaptive KV-cache designs</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section id="highlights" class="container sec">
+      <h2>Lab Highlights</h2>
+      <div class="highlight-grid">
+        <article class="highlight-card">
+          <h3>Open Source Leadership</h3>
+          <p>We released <strong>MOSS</strong>, one of China’s earliest open conversational LLMs, and continue to drive community-first development with open data, benchmarks, and APIs.</p>
+        </article>
+        <article class="highlight-card">
+          <h3>Industry Impact</h3>
+          <p>Collaborations with Huawei, Honor, ByteDance, and partners worldwide accelerate foundation model adoption in real products.</p>
+        </article>
+        <article class="highlight-card">
+          <h3>Academic Excellence</h3>
+          <p>Our teams publish at top venues (NeurIPS, ICML, ICLR, ACL, EMNLP, NAACL, ICCV) and frequently receive outstanding paper and demo awards.</p>
+        </article>
+        <article class="highlight-card">
+          <h3>Talent Development</h3>
+          <p>Alumni earn faculty positions at leading universities and join prominent AI startups as founders, CEOs, and CTOs.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="sechighlight" id="people">
+      <section class="container sec">
+        <h2>People</h2>
+        <div class="people-grid">
+          <article class="people-card">
+            <h3>Leadership</h3>
+            <p>Prof. Xipeng Qiu (Director) leads a team of faculty, research scientists, and collaborators from Fudan University and partner institutes.</p>
+            <a class="link" href="https://dalstonchen.github.io/openmosslab/people/">Meet the team</a>
+          </article>
+          <article class="people-card">
+            <h3>Students &amp; Fellows</h3>
+            <p>Graduate researchers, visiting scholars, and industry fellows push the boundaries of large-scale AI systems and societal deployment.</p>
+          </article>
+          <article class="people-card">
+            <h3>Alumni</h3>
+            <p>Our alumni community spans academia and industry—MIT, UC Berkeley, CMU, ByteDance, Alibaba, AWS, Optiver, and beyond.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section id="resources" class="container sec">
+      <h2>Resources &amp; Software</h2>
+      <div class="resource-grid">
+        <article class="resource-card">
+          <h3>Publications</h3>
+          <p>Explore our latest research spanning foundation models, interpretability, and embodied agents.</p>
+          <a class="btn btn-inline" href="https://dalstonchen.github.io/openmosslab/publications/">View publications</a>
+        </article>
+        <article class="resource-card">
+          <h3>Open Tools</h3>
+          <p>FastNLP, CoLLiE, SpeechGPT, UnifiedToolHub, and more open releases power the global AI ecosystem.</p>
+          <a class="btn btn-inline" href="https://github.com/openmosslab">Visit GitHub</a>
+        </article>
+        <article class="resource-card">
+          <h3>Learning Hub</h3>
+          <p>Curated reading lists, tutorials, and benchmarks for students and practitioners building with open models.</p>
+          <a class="btn btn-inline" href="https://dalstonchen.github.io/openmosslab/resources/">Browse resources</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="cta-band" id="join">
+      <div class="container cta-content">
+        <div>
+          <h2>Join OpenMOSSLab</h2>
+          <p>We are recruiting graduate students, postdocs, visiting researchers, and collaborators who are passionate about open systems and responsible AI.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://dalstonchen.github.io/openmosslab/join/">Open positions</a>
+          <a class="btn btn-outline" href="mailto:xpqiu@fudan.edu.cn">Contact Prof. Qiu</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>OpenMOSSLab</h3>
+        <p>3 Lane 699, Huafa Road, Xuhui District<br>Building 2X, No. 2005 Songhu Road, Yangpu District<br>Shanghai, China</p>
+      </div>
+      <div>
+        <h4>Affiliations</h4>
+        <ul>
+          <li><a href="https://ai.fudan.edu.cn/">Fudan AI</a></li>
+          <li><a href="https://nlp.fudan.edu.cn/">FudanNLP</a></li>
+          <li><a href="https://moss.fastnlp.top/">MOSS Project</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://github.com/openmosslab"><i class="fa-brands fa-github"></i> GitHub</a></li>
+          <li><a href="https://twitter.com/openmosslab"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+          <li><a href="mailto:xpqiu@fudan.edu.cn"><i class="fa-solid fa-envelope"></i> Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://dalstonchen.github.io/openmosslab/software/">Software</a></li>
+          <li><a href="https://dalstonchen.github.io/openmosslab/career/">Career</a></li>
+          <li><a href="https://dalstonchen.github.io/openmosslab/archive/">Archive</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>&copy; <span id="year"></span> OpenMOSSLab. Designed with inspiration from Stanford CS224N.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
