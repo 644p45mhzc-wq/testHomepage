@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OpenMOSSLab | Open Model Systems & Society Lab</title>
-  <meta name="description" content="OpenMOSSLab advances open model systems for language, multimodal understanding, and embodied intelligence.">
+  <title>OpenMOSSLab</title>
+  <meta name="description" content="OpenMOSS Lab - 邱锡鹏教授领导的人工智能研究实验室">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
   <nav class="navbar">
     <div class="container nav-container">
       <a class="brand" href="#top">
-        <img class="brand-logo" src="assets/img/openmoss-logo.png" alt="OpenMOSSLab logo">
-        <span class="brand-name">OpenMOSSLab</span>
+        <img class="brand-logo" src="assets/img/openmoss-logo.png" alt="OpenMOSS Lab logo">
+        <span class="brand-name">OpenMOSS Lab</span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
         <span class="sr-only">Toggle navigation</span>
@@ -25,12 +25,18 @@
         <span class="icon-bar"></span>
       </button>
       <ul class="nav-links" id="primary-navigation">
-        <li><a href="#about">About</a></li>
-        <li><a href="#pillars">Research</a></li>
-        <li><a href="#highlights">Highlights</a></li>
-        <li><a href="#people">People</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#join">Join</a></li>
+        <li><a href="#about" data-i18n="nav.about">关于</a></li>
+        <li><a href="#pillars" data-i18n="nav.research">研究方向</a></li>
+        <li><a href="#people" data-i18n="nav.people">团队成员</a></li>
+        <li><a href="#resources" data-i18n="nav.resources">资源</a></li>
+        <li><a href="#highlights" data-i18n="nav.highlights">实验室亮点</a></li>
+        <li><a href="#join" data-i18n="nav.join">加入我们</a></li>
+        <li>
+          <button id="lang-toggle" class="lang-btn" aria-label="切换语言">
+            <i class="fa-solid fa-language"></i>
+            <span class="lang-text">EN</span>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -38,32 +44,32 @@
   <header id="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Open Model Systems &amp; Society Lab</p>
-        <h1>Building trustworthy, open foundation models that serve society.</h1>
-        <p class="lead">Led by Prof. <span class="highlight">Xipeng Qiu</span>, OpenMOSSLab advances large-scale AI systems spanning language, multimodal intelligence, and embodied agents. We design open-source models, tools, and theory that ground AI in real-world impact.</p>
+        <p class="eyebrow" data-i18n="hero.subtitle">OpenMOSS Lab</p>
+        <h1 data-i18n="hero.title">构建值得信赖的开放基础模型，服务社会</h1>
+        <p class="lead" data-i18n="hero.description">在<span class="highlight">邱锡鹏</span>教授的带领下，OpenMOSS Lab 推进跨越语言、多模态智能和具身智能体的大规模 AI 系统研究。我们设计开源模型、工具和理论，将 AI 与现实世界影响相结合。</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#join">Work With Us</a>
-          <a class="btn btn-outline" href="#highlights">Latest Highlights</a>
+          <a class="btn btn-primary" href="#join" data-i18n="hero.cta1">加入我们</a>
+          <a class="btn btn-outline" href="#highlights" data-i18n="hero.cta2">最新亮点</a>
         </div>
       </div>
       <div class="hero-side">
         <div class="hero-panel">
-          <h2>What We Focus On</h2>
+          <h2 data-i18n="hero.focus.title">我们的研究重点</h2>
           <ul>
-            <li><span>Open-source foundation models</span></li>
-            <li><span>Multimodal learning &amp; reasoning</span></li>
-            <li><span>Embodied intelligence &amp; agents</span></li>
-            <li><span>Responsible, safe deployment</span></li>
+            <li><span data-i18n="hero.focus.item1">开源基础模型</span></li>
+            <li><span data-i18n="hero.focus.item2">多模态学习与推理</span></li>
+            <li><span data-i18n="hero.focus.item3">具身智能与智能体</span></li>
+            <li><span data-i18n="hero.focus.item4">负责任的安全部署</span></li>
           </ul>
         </div>
         <div class="hero-meta">
           <div>
             <h3>160+</h3>
-            <p>Publications across NeurIPS, ICML, ACL, EMNLP, CVPR, ICCV</p>
+            <p data-i18n="hero.stat1">发表于 NeurIPS、ICML、ACL、EMNLP、CVPR、ICCV 等顶会</p>
           </div>
           <div>
             <h3>30+</h3>
-            <p>Open-source releases including MOSS, FastNLP, CoLLiE</p>
+            <p data-i18n="hero.stat2">开源项目，包括 MOSS、FastNLP、CoLLiE 等</p>
           </div>
         </div>
       </div>
@@ -72,133 +78,182 @@
 
   <main>
     <section id="about" class="container sec">
-      <h2>About The Lab</h2>
-      <p>OpenMOSSLab, originally part of the FudanNLP group at Fudan University, pioneers open and responsible AI research. Our mission is to advance the theory, methods, and applications of large-scale AI systems—from pretraining and reasoning to multimodal and embodied intelligence—while ensuring tangible societal impact.</p>
-      <p>We collaborate with global research partners and industry leaders to translate foundational advances into deployable systems. Alumni continue at top-tier universities (MIT, UC Berkeley, CMU) and companies (ByteDance, Alibaba, AWS, Optiver), and many have launched startups or taken faculty roles.</p>
+      <h2 data-i18n="about.title">关于实验室</h2>
+      <p data-i18n="about.p1">OpenMOSS Lab 源于复旦大学 FudanNLP 团队，致力于开放和负责任的 AI 研究。我们的使命是推进大规模 AI 系统的理论、方法和应用——从预训练和推理到多模态和具身智能——同时确保切实的社会影响。</p>
+      <p data-i18n="about.p2">我们与全球研究合作伙伴和行业领导者合作，将基础研究转化为可部署的系统。校友遍布顶尖大学（MIT、UC Berkeley、CMU）和公司（ByteDance、Alibaba、AWS、Optiver），许多人创办了初创公司或担任教职。</p>
     </section>
 
     <div class="sechighlight" id="pillars">
       <section class="container sec">
-        <h2>Research Pillars</h2>
+        <h2 data-i18n="pillars.title">研究方向</h2>
         <div class="pillars-grid">
           <article class="pillar-card">
-            <h3>AI Infrastructure</h3>
-            <p>Optimizers, fine-tuning frameworks, and inference scaling that keep open models efficient, robust, and accessible.</p>
+            <h3 data-i18n="pillars.infra.title">AI 基础设施</h3>
+            <p data-i18n="pillars.infra.desc">优化器、微调框架和推理扩展，使开放模型更高效、稳健和易用。</p>
             <ul>
-              <li>LOMO, AdaLomo optimizers</li>
-              <li>CoLLiE: collaborative fine-tuning</li>
-              <li>Large-scale training pipelines</li>
+              <li>LOMO、AdaLomo 优化器</li>
+              <li>CoLLiE：协作微调</li>
+              <li>大规模训练流程</li>
             </ul>
           </article>
           <article class="pillar-card">
-            <h3>Multimodal Foundation Models</h3>
-            <p>Unified models spanning speech, vision, and language for grounded understanding and reasoning.</p>
+            <h3 data-i18n="pillars.multimodal.title">多模态基础模型</h3>
+            <p data-i18n="pillars.multimodal.desc">跨越语音、视觉和语言的统一模型，用于基础理解和推理。</p>
             <ul>
-              <li>SpeechGPT, SpeechTokenizer</li>
-              <li>AnyGPT, Visuothink, UnifiedVisual</li>
-              <li>Alignment across modalities</li>
+              <li>SpeechGPT、SpeechTokenizer</li>
+              <li>AnyGPT、Visuothink、UnifiedVisual</li>
+              <li>跨模态对齐</li>
             </ul>
           </article>
           <article class="pillar-card">
-            <h3>Reasoning &amp; Agents</h3>
-            <p>Large language model agents that plan, reason, and interact safely with humans and tools.</p>
+            <h3 data-i18n="pillars.reasoning.title">推理与智能体</h3>
+            <p data-i18n="pillars.reasoning.desc">能够规划、推理并安全地与人类和工具交互的大语言模型智能体。</p>
             <ul>
-              <li>Exchange-of-Thought dialogue agents</li>
-              <li>ConvSearch-R1 for retrieval-augmented reasoning</li>
-              <li>Tool-augmented workflows</li>
+              <li>Exchange-of-Thought 对话智能体</li>
+              <li>ConvSearch-R1 检索增强推理</li>
+              <li>工具增强工作流</li>
             </ul>
           </article>
           <article class="pillar-card">
-            <h3>Embodied &amp; Interactive AI</h3>
-            <p>Vision-language-action systems and simulators that connect models to physical environments.</p>
+            <h3 data-i18n="pillars.embodied.title">具身与交互式 AI</h3>
+            <p data-i18n="pillars.embodied.desc">将模型与物理环境连接的视觉-语言-动作系统和模拟器。</p>
             <ul>
-              <li>VLA-bench, D²PO</li>
-              <li>VehicleWorld simulation</li>
-              <li>Task-centric embodied planning</li>
+              <li>VLA-bench、D²PO</li>
+              <li>VehicleWorld 模拟</li>
+              <li>以任务为中心的具身规划</li>
             </ul>
           </article>
           <article class="pillar-card">
-            <h3>Model Safety &amp; Interpretability</h3>
-            <p>Transparency, evaluation, and governance frameworks for responsible open model deployment.</p>
+            <h3 data-i18n="pillars.safety.title">模型安全与可解释性</h3>
+            <p data-i18n="pillars.safety.desc">负责任开放模型部署的透明度、评估和治理框架。</p>
             <ul>
-              <li>Attention decomposition analysis</li>
-              <li>Bias and robustness evaluations</li>
-              <li>Values-aligned post-training</li>
+              <li>注意力分解分析</li>
+              <li>偏见和鲁棒性评估</li>
+              <li>价值对齐的后训练</li>
             </ul>
           </article>
           <article class="pillar-card">
-            <h3>New Architectures</h3>
-            <p>Diffusion-based LLMs, long-context modeling, and memory-efficient transformers for next-generation systems.</p>
+            <h3 data-i18n="pillars.arch.title">新型架构</h3>
+            <p data-i18n="pillars.arch.desc">基于扩散的 LLM、长上下文建模和内存高效的 Transformer，用于下一代系统。</p>
             <ul>
-              <li>Sparse-dLLM, LongLLaDA</li>
-              <li>LongWanjuan, LongSafety</li>
-              <li>Adaptive KV-cache designs</li>
+              <li>Sparse-dLLM、LongLLaDA</li>
+              <li>LongWanjuan、LongSafety</li>
+              <li>自适应 KV-cache 设计</li>
             </ul>
           </article>
         </div>
       </section>
     </div>
 
-    <section id="highlights" class="container sec">
-      <h2>Lab Highlights</h2>
-      <div class="highlight-grid">
-        <article class="highlight-card">
-          <h3>Open Source Leadership</h3>
-          <p>We released <strong>MOSS</strong>, one of China’s earliest open conversational LLMs, and continue to drive community-first development with open data, benchmarks, and APIs.</p>
-        </article>
-        <article class="highlight-card">
-          <h3>Industry Impact</h3>
-          <p>Collaborations with Huawei, Honor, ByteDance, and partners worldwide accelerate foundation model adoption in real products.</p>
-        </article>
-        <article class="highlight-card">
-          <h3>Academic Excellence</h3>
-          <p>Our teams publish at top venues (NeurIPS, ICML, ICLR, ACL, EMNLP, NAACL, ICCV) and frequently receive outstanding paper and demo awards.</p>
-        </article>
-        <article class="highlight-card">
-          <h3>Talent Development</h3>
-          <p>Alumni earn faculty positions at leading universities and join prominent AI startups as founders, CEOs, and CTOs.</p>
-        </article>
-      </div>
-    </section>
-
     <div class="sechighlight" id="people">
       <section class="container sec">
-        <h2>People</h2>
-        <div class="people-grid">
+        <h2 data-i18n="people.title">团队成员</h2>
+        
+        <h3 class="section-subtitle" data-i18n="people.core">核心成员</h3>
+        <div class="team-members">
+          <div class="member-card">
+            <img src="assets/img/Xipeng Qiu.jpg" alt="Xipeng Qiu" class="member-photo">
+            <h4 class="member-name" data-i18n="people.member1.name">邱锡鹏</h4>
+            <p class="member-title" data-i18n="people.member1.title">教授，实验室主任</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="assets/img/Xinchi Chen.jpg" alt="Xinchi Chen" class="member-photo">
+            <h4 class="member-name" data-i18n="people.member2.name">陈新驰</h4>
+            <p class="member-title" data-i18n="people.member2.title">青年研究员</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="assets/img/Jinlan Fu.jpg" alt="Jinlan Fu" class="member-photo">
+            <h4 class="member-name" data-i18n="people.member3.name">傅金兰</h4>
+            <p class="member-title" data-i18n="people.member3.title">助理教授</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="assets/img/Tao Ji.jpeg" alt="Tao Ji" class="member-photo">
+            <h4 class="member-name" data-i18n="people.member4.name">纪焘</h4>
+            <p class="member-title" data-i18n="people.member4.title">助理教授</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="assets/img/Jingjing Gong.jpg" alt="Jingjing Gong" class="member-photo">
+            <h4 class="member-name" data-i18n="people.member5.name">龚经经</h4>
+            <p class="member-title" data-i18n="people.member5.title">研究助理教授</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="assets/img/Ziwei He.jpg" alt="Ziwei He" class="member-photo">
+            <h4 class="member-name" data-i18n="people.member6.name">何子薇</h4>
+            <p class="member-title" data-i18n="people.member6.title">研究助理教授</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="assets/img/Shuang Chen.jpg" alt="Shuang Chen" class="member-photo">
+            <h4 class="member-name" data-i18n="people.member7.name">陈爽</h4>
+            <p class="member-title" data-i18n="people.member7.title">专任副研究员</p>
+          </div>
+          
+          <div class="member-card">
+            <img src="assets/img/Yining Zheng.jpeg" alt="Yining Zheng" class="member-photo">
+            <h4 class="member-name" data-i18n="people.member8.name">郑逸宁</h4>
+            <p class="member-title" data-i18n="people.member8.title">专任副研究员</p>
+          </div>
+        </div>
+
+        <div class="people-sections">
           <article class="people-card">
-            <h3>Leadership</h3>
-            <p>Prof. Xipeng Qiu (Director) leads a team of faculty, research scientists, and collaborators from Fudan University and partner institutes.</p>
-            <a class="link" href="https://dalstonchen.github.io/openmosslab/people/">Meet the team</a>
+            <h3 data-i18n="people.students.title">学生与访问学者</h3>
+            <p data-i18n="people.students.desc">研究生、访问学者和行业研究员共同推动大规模 AI 系统和社会应用的边界。</p>
+            <a class="btn btn-inline" href="people.html" data-i18n="people.students.link">查看完整团队</a>
           </article>
           <article class="people-card">
-            <h3>Students &amp; Fellows</h3>
-            <p>Graduate researchers, visiting scholars, and industry fellows push the boundaries of large-scale AI systems and societal deployment.</p>
-          </article>
-          <article class="people-card">
-            <h3>Alumni</h3>
-            <p>Our alumni community spans academia and industry—MIT, UC Berkeley, CMU, ByteDance, Alibaba, AWS, Optiver, and beyond.</p>
+            <h3 data-i18n="people.alumni.title">校友网络</h3>
+            <p data-i18n="people.alumni.desc">我们的校友遍布学术界和工业界—MIT、UC Berkeley、CMU、ByteDance、Alibaba、AWS、Optiver 等知名机构。</p>
+            <a class="btn btn-inline" href="alumni.html" data-i18n="people.alumni.link">了解更多</a>
           </article>
         </div>
       </section>
     </div>
 
     <section id="resources" class="container sec">
-      <h2>Resources &amp; Software</h2>
+      <h2 data-i18n="resources.title">资源与软件</h2>
       <div class="resource-grid">
         <article class="resource-card">
-          <h3>Publications</h3>
-          <p>Explore our latest research spanning foundation models, interpretability, and embodied agents.</p>
-          <a class="btn btn-inline" href="https://dalstonchen.github.io/openmosslab/publications/">View publications</a>
+          <h3 data-i18n="resources.publications.title">学术论文</h3>
+          <p data-i18n="resources.publications.desc">探索我们在基础模型、可解释性和具身智能体方面的最新研究。</p>
+          <a class="btn btn-inline" href="https://scholar.google.com/citations?user=Pq4Yp_kAAAAJ&hl=en" target="_blank" data-i18n="resources.publications.link">查看论文</a>
         </article>
         <article class="resource-card">
-          <h3>Open Tools</h3>
-          <p>FastNLP, CoLLiE, SpeechGPT, UnifiedToolHub, and more open releases power the global AI ecosystem.</p>
-          <a class="btn btn-inline" href="https://github.com/openmosslab">Visit GitHub</a>
+          <h3 data-i18n="resources.tools.title">开源工具</h3>
+          <p data-i18n="resources.tools.desc">FastNLP、CoLLiE、SpeechGPT、UnifiedToolHub 等开源项目为全球 AI 生态系统提供支持。</p>
+          <a class="btn btn-inline" href="https://github.com/OpenMOSS" target="_blank" data-i18n="resources.tools.link">访问 GitHub</a>
         </article>
         <article class="resource-card">
-          <h3>Learning Hub</h3>
-          <p>Curated reading lists, tutorials, and benchmarks for students and practitioners building with open models.</p>
-          <a class="btn btn-inline" href="https://dalstonchen.github.io/openmosslab/resources/">Browse resources</a>
+          <h3 data-i18n="resources.learning.title">学习中心</h3>
+          <p data-i18n="resources.learning.desc">为使用开放模型构建应用的学生和从业者精心策划的阅读清单、教程和基准。</p>
+          <a class="btn btn-inline" href="resources.html" data-i18n="resources.learning.link">浏览资源</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="highlights" class="container sec">
+      <h2 data-i18n="highlights.title">实验室亮点</h2>
+      <div class="highlight-grid">
+        <article class="highlight-card">
+          <h3 data-i18n="highlights.opensource.title">开源领导力</h3>
+          <p data-i18n="highlights.opensource.desc">我们发布了 <strong>MOSS</strong>——中国最早的开放对话式大语言模型之一，并持续推动以社区为先的开发，提供开放数据、基准和 API。</p>
+        </article>
+        <article class="highlight-card">
+          <h3 data-i18n="highlights.industry.title">产业影响</h3>
+          <p data-i18n="highlights.industry.desc">与华为、荣耀、字节跳动和全球合作伙伴的协作，加速了基础模型在实际产品中的应用。</p>
+        </article>
+        <article class="highlight-card">
+          <h3 data-i18n="highlights.academic.title">学术卓越</h3>
+          <p data-i18n="highlights.academic.desc">我们的团队在顶级会议（NeurIPS、ICML、ICLR、ACL、EMNLP、NAACL、ICCV）发表论文，并经常获得杰出论文和演示奖。</p>
+        </article>
+        <article class="highlight-card">
+          <h3 data-i18n="highlights.talent.title">人才培养</h3>
+          <p data-i18n="highlights.talent.desc">校友在顶尖大学担任教职，并以创始人、CEO 和 CTO 的身份加入知名 AI 初创公司。</p>
         </article>
       </div>
     </section>
@@ -206,12 +261,12 @@
     <div class="cta-band" id="join">
       <div class="container cta-content">
         <div>
-          <h2>Join OpenMOSSLab</h2>
-          <p>We are recruiting graduate students, postdocs, visiting researchers, and collaborators who are passionate about open systems and responsible AI.</p>
+          <h2 data-i18n="join.title">加入 OpenMOSS Lab</h2>
+          <p data-i18n="join.desc">我们正在招募对开放系统和负责任 AI 充满热情的研究生、博士后、访问学者和合作者。</p>
         </div>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="https://dalstonchen.github.io/openmosslab/join/">Open positions</a>
-          <a class="btn btn-outline" href="mailto:xpqiu@fudan.edu.cn">Contact Prof. Qiu</a>
+          <a class="btn btn-primary" href="positions.html" data-i18n="join.positions">开放职位</a>
+          <a class="btn btn-outline" href="mailto:xpqiu@fudan.edu.cn" data-i18n="join.contact">联系邱教授</a>
         </div>
       </div>
     </div>
@@ -220,19 +275,19 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <h3>OpenMOSSLab</h3>
-        <p>3 Lane 699, Huafa Road, Xuhui District<br>Building 2X, No. 2005 Songhu Road, Yangpu District<br>Shanghai, China</p>
+        <h3>OpenMOSS Lab</h3>
+        <p data-i18n="footer.address">上海市徐汇区华发路699弄3号<br>上海市杨浦区淞沪路2005号2X号楼<br>中国</p>
       </div>
       <div>
-        <h4>Affiliations</h4>
+        <h4 data-i18n="footer.affiliations">合作单位</h4>
         <ul>
-          <li><a href="https://ai.fudan.edu.cn/">Fudan AI</a></li>
+          <li><a href="https://ai.fudan.edu.cn/">复旦大学 AI</a></li>
           <li><a href="https://nlp.fudan.edu.cn/">FudanNLP</a></li>
-          <li><a href="https://moss.fastnlp.top/">MOSS Project</a></li>
+          <li><a href="https://moss.fastnlp.top/">MOSS 项目</a></li>
         </ul>
       </div>
       <div>
-        <h4>Connect</h4>
+        <h4 data-i18n="footer.connect">联系我们</h4>
         <ul>
           <li><a href="https://github.com/openmosslab"><i class="fa-brands fa-github"></i> GitHub</a></li>
           <li><a href="https://twitter.com/openmosslab"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
@@ -240,16 +295,16 @@
         </ul>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4 data-i18n="footer.links">快速链接</h4>
         <ul>
-          <li><a href="https://dalstonchen.github.io/openmosslab/software/">Software</a></li>
-          <li><a href="https://dalstonchen.github.io/openmosslab/career/">Career</a></li>
-          <li><a href="https://dalstonchen.github.io/openmosslab/archive/">Archive</a></li>
+          <li><a href="https://dalstonchen.github.io/openmosslab/software/" data-i18n="footer.software">软件</a></li>
+          <li><a href="https://dalstonchen.github.io/openmosslab/career/" data-i18n="footer.career">职业发展</a></li>
+          <li><a href="https://dalstonchen.github.io/openmosslab/archive/" data-i18n="footer.archive">档案</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-note">
-      <p>&copy; <span id="year"></span> OpenMOSSLab. Designed with inspiration from Stanford CS224N.</p>
+      <p data-i18n="footer.copyright">&copy; <span id="year"></span> OpenMOSS Lab. 设计灵感来自 Stanford CS224N.</p>
     </div>
   </footer>
 

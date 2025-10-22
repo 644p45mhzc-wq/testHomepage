@@ -152,6 +152,34 @@ nav.navbar {
   text-decoration: none;
 }
 
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.lang-btn i {
+  font-size: 16px;
+}
+
+.lang-text {
+  font-weight: 500;
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -373,10 +401,62 @@ nav.navbar {
   min-height: 200px;
 }
 
-.people-grid {
+.section-subtitle {
+  font-size: 20px;
+  color: var(--fudan-blue);
+  margin-bottom: 32px;
+  margin-top: 24px;
+}
+
+.team-members {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 32px 24px;
+  margin-bottom: 48px;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--fudan-blue-90);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  margin-bottom: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(14, 65, 156, 0.25);
+}
+
+.member-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.member-title {
+  font-size: 14px;
+  color: var(--text-soft);
+  margin: 0;
+  font-weight: 300;
+}
+
+.people-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
+  margin-top: 32px;
 }
 
 .people-card {
@@ -525,6 +605,10 @@ nav.navbar {
     position: sticky;
   }
 
+  .lang-btn {
+    margin-top: 8px;
+  }
+
   .hero-actions {
     flex-wrap: wrap;
   }
@@ -553,5 +637,23 @@ nav.navbar {
 
   .nav-links {
     align-items: stretch;
+  }
+
+  .team-members {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 24px 16px;
+  }
+
+  .member-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .member-name {
+    font-size: 15px;
+  }
+
+  .member-title {
+    font-size: 13px;
   }
 }

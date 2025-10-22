@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>校友网络 | OpenMOSS Lab</title>
+  <meta name="description" content="OpenMOSS Lab 校友网络">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-gO9FwZP1781OeR3SiPtK0aGpG99nmHn7+O+kO5RAwOB1p5MNDoAuCEi0aKBslZx2drXr/7L0KleKX2ND/qY1KQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/openmoss-logo.png" alt="OpenMOSS Lab logo">
+        <span class="brand-name">OpenMOSS Lab</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html#about" data-i18n="nav.about">关于</a></li>
+        <li><a href="index.html#pillars" data-i18n="nav.research">研究方向</a></li>
+        <li><a href="index.html#people" data-i18n="nav.people">团队成员</a></li>
+        <li><a href="index.html#resources" data-i18n="nav.resources">资源</a></li>
+        <li><a href="index.html#highlights" data-i18n="nav.highlights">实验室亮点</a></li>
+        <li><a href="index.html#join" data-i18n="nav.join">加入我们</a></li>
+        <li>
+          <button id="lang-toggle" class="lang-btn" aria-label="切换语言">
+            <i class="fa-solid fa-language"></i>
+            <span class="lang-text">EN</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container sec" style="padding-top: 100px;">
+      <h1 data-i18n="alumniPage.title">校友网络</h1>
+      
+      <p class="lead" data-i18n="alumniPage.intro">OpenMOSS Lab 为培养了众多优秀的研究人员和工程师而自豪。我们的校友遍布学术界和工业界，在世界各地的顶尖机构和公司中发挥着重要作用。</p>
+
+      <div class="highlight-grid" style="margin-top: 60px;">
+        <article class="highlight-card">
+          <h3 data-i18n="alumniPage.academia.title">学术界</h3>
+          <p data-i18n="alumniPage.academia.desc">我们的校友在 MIT、Stanford、UC Berkeley、CMU、清华大学、北京大学等世界顶尖大学担任教职或继续深造。</p>
+        </article>
+        
+        <article class="highlight-card">
+          <h3 data-i18n="alumniPage.industry.title">产业界</h3>
+          <p data-i18n="alumniPage.industry.desc">校友在 ByteDance、Alibaba、Tencent、Huawei、AWS、Google、Meta 等领先科技公司从事前沿 AI 研究和开发工作。</p>
+        </article>
+        
+        <article class="highlight-card">
+          <h3 data-i18n="alumniPage.startup.title">创业者</h3>
+          <p data-i18n="alumniPage.startup.desc">许多校友创办了自己的 AI 初创公司，以创始人、CEO 和 CTO 的身份推动人工智能技术的商业化应用。</p>
+        </article>
+        
+        <article class="highlight-card">
+          <h3 data-i18n="alumniPage.research.title">研究机构</h3>
+          <p data-i18n="alumniPage.research.desc">校友在各类研究机构和实验室担任重要职位，继续在 NLP、CV、ML 等领域进行突破性研究。</p>
+        </article>
+      </div>
+
+      <div style="margin-top: 80px; background-color: var(--mist); padding: 40px; border-radius: 12px;">
+        <h2 data-i18n="alumniPage.network.title">保持联系</h2>
+        <p data-i18n="alumniPage.network.desc">我们重视与校友的持续联系和合作。如果您是 OpenMOSS Lab 的校友，欢迎通过以下方式与我们保持联系：</p>
+        <ul style="margin-top: 20px;">
+          <li data-i18n="alumniPage.network.item1">加入我们的校友微信群和 Slack 频道</li>
+          <li data-i18n="alumniPage.network.item2">参加年度校友聚会和学术研讨会</li>
+          <li data-i18n="alumniPage.network.item3">与在读学生分享经验和职业建议</li>
+          <li data-i18n="alumniPage.network.item4">开展合作研究项目和产学研合作</li>
+        </ul>
+        <p style="margin-top: 30px;" data-i18n="alumniPage.network.contact">如需更新您的联系方式或了解校友活动，请联系：<a href="mailto:xpqiu@fudan.edu.cn">xpqiu@fudan.edu.cn</a></p>
+      </div>
+
+      <div style="margin-top: 60px; text-align: center;">
+        <a class="btn btn-primary" href="index.html" data-i18n="alumniPage.backHome">返回首页</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>OpenMOSS Lab</h3>
+        <p data-i18n="footer.address">上海市徐汇区华发路699弄3号<br>上海市杨浦区淞沪路2005号2X号楼<br>中国</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.affiliations">合作单位</h4>
+        <ul>
+          <li><a href="https://ai.fudan.edu.cn/">复旦大学 AI</a></li>
+          <li><a href="https://nlp.fudan.edu.cn/">FudanNLP</a></li>
+          <li><a href="https://moss.fastnlp.top/">MOSS 项目</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.connect">联系我们</h4>
+        <ul>
+          <li><a href="https://github.com/openmosslab"><i class="fa-brands fa-github"></i> GitHub</a></li>
+          <li><a href="https://twitter.com/openmosslab"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+          <li><a href="mailto:xpqiu@fudan.edu.cn"><i class="fa-solid fa-envelope"></i> Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">快速链接</h4>
+        <ul>
+          <li><a href="https://dalstonchen.github.io/openmosslab/software/" data-i18n="footer.software">软件</a></li>
+          <li><a href="https://dalstonchen.github.io/openmosslab/career/" data-i18n="footer.career">职业发展</a></li>
+          <li><a href="https://dalstonchen.github.io/openmosslab/archive/" data-i18n="footer.archive">档案</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p data-i18n="footer.copyright">&copy; <span id="year"></span> OpenMOSS Lab. 设计灵感来自 Stanford CS224N.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
