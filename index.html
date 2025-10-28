@@ -150,54 +150,9 @@
         <h2 data-i18n="people.title">团队成员</h2>
         
         <h3 class="section-subtitle" data-i18n="people.core">核心成员</h3>
-        <div class="team-members">
-          <div class="member-card">
-            <img src="assets/img/Xipeng Qiu.jpg" alt="Xipeng Qiu" class="member-photo">
-            <h4 class="member-name" data-i18n="people.member1.name">邱锡鹏</h4>
-            <p class="member-title" data-i18n="people.member1.title">教授，实验室主任</p>
-          </div>
-          
-          <div class="member-card">
-            <img src="assets/img/Xinchi Chen.jpg" alt="Xinchi Chen" class="member-photo">
-            <h4 class="member-name" data-i18n="people.member2.name">陈新驰</h4>
-            <p class="member-title" data-i18n="people.member2.title">青年研究员</p>
-          </div>
-          
-          <div class="member-card">
-            <img src="assets/img/Jinlan Fu.jpg" alt="Jinlan Fu" class="member-photo">
-            <h4 class="member-name" data-i18n="people.member3.name">傅金兰</h4>
-            <p class="member-title" data-i18n="people.member3.title">助理教授</p>
-          </div>
-          
-          <div class="member-card">
-            <img src="assets/img/Tao Ji.jpeg" alt="Tao Ji" class="member-photo">
-            <h4 class="member-name" data-i18n="people.member4.name">纪焘</h4>
-            <p class="member-title" data-i18n="people.member4.title">助理教授</p>
-          </div>
-          
-          <div class="member-card">
-            <img src="assets/img/Jingjing Gong.jpg" alt="Jingjing Gong" class="member-photo">
-            <h4 class="member-name" data-i18n="people.member5.name">龚经经</h4>
-            <p class="member-title" data-i18n="people.member5.title">研究助理教授</p>
-          </div>
-          
-          <div class="member-card">
-            <img src="assets/img/Ziwei He.jpg" alt="Ziwei He" class="member-photo">
-            <h4 class="member-name" data-i18n="people.member6.name">何子薇</h4>
-            <p class="member-title" data-i18n="people.member6.title">研究助理教授</p>
-          </div>
-          
-          <div class="member-card">
-            <img src="assets/img/Shuang Chen.jpg" alt="Shuang Chen" class="member-photo">
-            <h4 class="member-name" data-i18n="people.member7.name">陈爽</h4>
-            <p class="member-title" data-i18n="people.member7.title">专任副研究员</p>
-          </div>
-          
-          <div class="member-card">
-            <img src="assets/img/Yining Zheng.jpeg" alt="Yining Zheng" class="member-photo">
-            <h4 class="member-name" data-i18n="people.member8.name">郑逸宁</h4>
-            <p class="member-title" data-i18n="people.member8.title">专任副研究员</p>
-          </div>
+        <!-- 成员列表由 data.js 和 main.js 动态渲染 -->
+        <div class="team-members" id="core-members-home">
+          <!-- 核心成员将通过 JavaScript 动态加载 -->
         </div>
 
         <div class="people-sections">
@@ -308,6 +263,8 @@
     </div>
   </footer>
 
+  <!-- 必须先加载 data.js，再加载 main.js -->
+  <script src="assets/js/data.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
