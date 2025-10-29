@@ -12,16 +12,17 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     /* Scoped adjustments for alumni directory layout */
-    /* Align content left edge with navbar logo left edge */
-    /* Both use same .container class, so they should auto-align */
-    #alumni-main.container { 
-      padding-left: 0; 
-      padding-right: 0; 
-      box-sizing: border-box;
+    /* Align content left edge with index.html "构" character position */
+    /* Ensure exact same alignment as index.html hero section */
+    #alumni-main.container {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: auto;
+      margin-right: auto;
+      width: min(1100px, calc(100% - 40px));
     }
-    /* Ensure no extra spacing affects alignment */
-    #alumni-main > nav,
-    #alumni-main > section {
+    /* Remove any margin from breadcrumb that might cause offset */
+    #alumni-main > nav[aria-label="Breadcrumb"] {
       margin-left: 0;
       padding-left: 0;
     }
@@ -41,8 +42,6 @@
     @media (max-width: 1200px) { .toc-sidebar { display: none; } }
     /* Prevent fixed navbar from covering anchors */
     h2[id], h3.year-badge { scroll-margin-top: 110px; }
-    /* Shift main when sidebar visible */
-    @media (min-width: 1200px) { #alumni-main { margin-left: 260px; } }
   </style>
 </head>
 <body>
