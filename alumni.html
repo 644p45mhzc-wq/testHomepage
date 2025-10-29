@@ -15,6 +15,12 @@
     .alumni-dir .member-card { align-items: flex-start; text-align: left; }
     .alumni-dir .member-name { font-size: 15px; }
     .alumni-dir .member-title { font-size: 13px; }
+    .year-badge { display: inline-block; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 4px 10px; box-shadow: 0 4px 10px var(--shadow-color); }
+    .toc-floating { position: fixed; right: 16px; top: 100px; width: 240px; background: var(--white); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 8px 20px var(--shadow-color); padding: 16px; z-index: 1000; }
+    .toc-floating h3 { margin: 0 0 10px; font-size: 16px; color: var(--fudan-blue); font-weight: 500; }
+    .toc-links { display: grid; gap: 8px; }
+    .toc-links a { display: block; text-align: center; }
+    @media (max-width: 1200px) { .toc-floating { display: none; } }
   </style>
 </head>
 <body>
@@ -60,17 +66,28 @@
         <h1 data-i18n="alumniPage.title" style="font-weight: 700;"><strong>校友介绍</strong></h1>
         <p class="lead" data-i18n="alumniPage.intro">OpenMOSS Lab 为培养了众多优秀的研究人员和工程师而自豪。我们的校友遍布学术界和工业界，在世界各地的顶尖机构和公司中发挥着重要作用。</p>
       </div>
+      </div>
+
+      <aside class="toc-floating" aria-label="快速导航">
+        <h3>目录</h3>
+        <div class="toc-links">
+          <a class="btn btn-inline" href="#faculty">在职教师</a>
+          <a class="btn btn-inline" href="#postdocs">博士后</a>
+          <a class="btn btn-inline" href="#phd">博士生</a>
+          <a class="btn btn-inline" href="#masters">硕士生</a>
+          <a class="btn btn-inline" href="#undergrad">本科生</a>
+          <a class="btn btn-inline" href="#visiting">访问校友</a>
+        </div>
+      </aside>
 
       <!-- Categorized Alumni Directory -->
       <section class="alumni-dir" aria-label="按类别的校友名录" style="margin-top: 24px;">
-        <h2 class="section-subtitle">在职教师</h2>
-        <div style="font-size: 15px; color: var(--text-soft); margin-bottom: 16px;">待补充</div>
+        <h2 id="faculty" class="section-subtitle">在职教师</h2>
 
-        <h2 class="section-subtitle">博士后</h2>
-        <div style="font-size: 15px; color: var(--text-soft); margin-bottom: 16px;">待补充</div>
+        <h2 id="postdocs" class="section-subtitle">博士后</h2>
 
-        <h2 class="section-subtitle">博士生</h2>
-        <h3 style="margin: 8px 0 8px; font-size: 16px; color: var(--text);">2024级</h3>
+        <h2 id="phd" class="section-subtitle">博士生</h2>
+        <h3 class="year-badge" style="margin: 8px 0 8px; font-size: 16px; color: var(--text);">2024级</h3>
         <div class="team-members" style="margin-top: 8px;">
           <div class="member-card"><h4 class="member-name">王思尹</h4><p class="member-title">卓博</p></div>
           <div class="member-card"><h4 class="member-name">施君豪</h4><p class="member-title">直博</p></div>
@@ -78,52 +95,52 @@
           <div class="member-card"><h4 class="member-name">李睿潇</h4><p class="member-title">卓博（共同导师：黄萱菁）</p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2023级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2023级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">费朝烨</h4><p class="member-title"></p></div>
-          <div class="member-card"><h4 class="member-name">高庆麾</h4><p class="member-title">硕博</p></div>
-          <div class="member-card"><h4 class="member-name">贺正夫</h4><p class="member-title">直博</p></div>
-          <div class="member-card"><h4 class="member-name">姜博天</h4><p class="member-title">硕博</p></div>
-          <div class="member-card"><h4 class="member-name">刘智耿</h4><p class="member-title">硕博</p></div>
-          <div class="member-card"><h4 class="member-name">谭臣坤</h4><p class="member-title">硕博</p></div>
+          <div class="member-card"><h4 class="member-name">高庆麾</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">贺正夫</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">姜博天</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">刘智耿</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">谭臣坤</h4><p class="member-title"></p></div>
           <div class="member-card"><h4 class="member-name">曾致远</h4><p class="member-title"></p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2022级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2022级</h3>
         <div class="team-members">
-          <div class="member-card"><h4 class="member-name">柳潇然</h4><p class="member-title">硕博</p></div>
-          <div class="member-card"><h4 class="member-name">王鹏宇</h4><p class="member-title">硕博</p></div>
-          <div class="member-card"><h4 class="member-name">詹俊</h4><p class="member-title">硕博</p></div>
+          <div class="member-card"><h4 class="member-name">柳潇然</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">王鹏宇</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">詹俊</h4><p class="member-title"></p></div>
           <div class="member-card"><h4 class="member-name">王博</h4><p class="member-title"></p></div>
-          <div class="member-card"><h4 class="member-name">王星皓</h4><p class="member-title">直博</p></div>
+          <div class="member-card"><h4 class="member-name">王星皓</h4><p class="member-title"></p></div>
           <div class="member-card"><h4 class="member-name">邵云帆</h4><p class="member-title"></p></div>
           <div class="member-card"><h4 class="member-name">代俊奇</h4><p class="member-title">（共同导师：黄萱菁）</p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2021级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2021级</h3>
         <div class="team-members">
-          <div class="member-card"><h4 class="member-name">程沁源</h4><p class="member-title">硕博</p></div>
+          <div class="member-card"><h4 class="member-name">程沁源</h4><p class="member-title"></p></div>
           <div class="member-card"><h4 class="member-name">汪燠欣</h4><p class="member-title">（共同导师：黄萱菁）</p></div>
-          <div class="member-card"><h4 class="member-name">刘佩举</h4><p class="member-title">硕博</p></div>
-          <div class="member-card"><h4 class="member-name">吕凯</h4><p class="member-title">硕博</p></div>
-          <div class="member-card"><h4 class="member-name">印张悦</h4><p class="member-title">硕博</p></div>
+          <div class="member-card"><h4 class="member-name">刘佩举</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">吕凯</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">印张悦</h4><p class="member-title"></p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2020级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2020级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">李孝男</h4><p class="member-title">直博；毕业去向：USA Startup</p></div>
           <div class="member-card"><h4 class="member-name">周云华</h4><p class="member-title">毕业去向：上海人工智能实验</p></div>
-          <div class="member-card"><h4 class="member-name">李世民</h4><p class="member-title">硕博；毕业去向：模思</p></div>
-          <div class="member-card"><h4 class="member-name">刘向阳</h4><p class="member-title">硕博；毕业去向：创业</p></div>
-          <div class="member-card"><h4 class="member-name">罗琪</h4><p class="member-title">硕博</p></div>
+          <div class="member-card"><h4 class="member-name">李世民</h4><p class="member-title">毕业去向：模思</p></div>
+          <div class="member-card"><h4 class="member-name">刘向阳</h4><p class="member-title">毕业去向：创业</p></div>
+          <div class="member-card"><h4 class="member-name">罗琪</h4><p class="member-title"></p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2019级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2019级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">颜航</h4><p class="member-title">毕业去向：上海人工智能实验室</p></div>
           <div class="member-card"><h4 class="member-name">李林阳</h4><p class="member-title">毕业去向：上海人工智能实验室</p></div>
           <div class="member-card"><h4 class="member-name">孙天祥</h4><p class="member-title">（共同导师：黄萱菁）；毕业去向：创业</p></div>
-          <div class="member-card"><h4 class="member-name">郑逸宁</h4><p class="member-title">硕博</p></div>
+          <div class="member-card"><h4 class="member-name">郑逸宁</h4><p class="member-title"></p></div>
         </div>
 
         <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2016级</h3>
@@ -146,8 +163,8 @@
           <div class="member-card"><h4 class="member-name">陈新驰</h4><p class="member-title">（共同导师：黄萱菁）；多项荣誉；毕业去向：爱丁堡大学博后</p></div>
         </div>
 
-        <h2 class="section-subtitle" style="margin-top: 24px;">硕士生</h2>
-        <h3 style="margin: 8px 0 8px; font-size: 16px; color: var(--text);">2024级</h3>
+        <h2 id="masters" class="section-subtitle" style="margin-top: 24px;">硕士生</h2>
+        <h3 class="year-badge" style="margin: 8px 0 8px; font-size: 16px; color: var(--text);">2024级</h3>
         <div class="team-members" style="margin-top: 8px;">
           <div class="member-card"><h4 class="member-name">陈硕</h4><p class="member-title"></p></div>
           <div class="member-card"><h4 class="member-name">范力玮</h4><p class="member-title"></p></div>
@@ -172,7 +189,7 @@
           <div class="member-card"><h4 class="member-name">周劭俊</h4><p class="member-title"></p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2023级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2023级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">邓瑞凡</h4><p class="member-title"></p></div>
           <div class="member-card"><h4 class="member-name">郭一然</h4><p class="member-title"></p></div>
@@ -186,7 +203,7 @@
           <div class="member-card"><h4 class="member-name">朱长泰</h4><p class="member-title"></p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2022级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2022级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">陈科宇</h4><p class="member-title"></p></div>
           <div class="member-card"><h4 class="member-name">陈云涛</h4><p class="member-title">上海电网</p></div>
@@ -204,7 +221,7 @@
           <div class="member-card"><h4 class="member-name">宗一</h4><p class="member-title">蚂蚁</p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2021级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2021级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">常成</h4><p class="member-title">模思</p></div>
           <div class="member-card"><h4 class="member-name">胡先念</h4><p class="member-title">阿里</p></div>
@@ -221,7 +238,7 @@
           <div class="member-card"><h4 class="member-name">郑彦俊</h4><p class="member-title">蚂蚁</p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2020级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2020级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">安晨鑫</h4><p class="member-title">香港大学，PHD</p></div>
           <div class="member-card"><h4 class="member-name">费朝烨</h4><p class="member-title">转博</p></div>
@@ -232,7 +249,7 @@
           <div class="member-card"><h4 class="member-name">杨建强</h4><p class="member-title">阿里</p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2019级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2019级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">邵云帆</h4><p class="member-title">转博</p></div>
           <div class="member-card"><h4 class="member-name">籍佗</h4><p class="member-title"></p></div>
@@ -276,7 +293,7 @@
           <div class="member-card"><h4 class="member-name">曹零</h4><p class="member-title">阿里</p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2018级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2018级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">王丹青</h4><p class="member-title">字节</p></div>
           <div class="member-card"><h4 class="member-name">钟鸣</h4><p class="member-title">UIUC，PHD</p></div>
@@ -288,7 +305,7 @@
           <div class="member-card"><h4 class="member-name">梁建泽</h4><p class="member-title">微软</p></div>
         </div>
 
-        <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2017级</h3>
+        <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2017级</h3>
         <div class="team-members">
           <div class="member-card"><h4 class="member-name">孙付</h4><p class="member-title">阿里</p></div>
           <div class="member-card"><h4 class="member-name">蒋昊</h4><p class="member-title"></p></div>
@@ -297,7 +314,7 @@
           <div class="member-card"><h4 class="member-name">柯震</h4><p class="member-title">小米</p></div>
         </div>
 
-        <h2 class="section-subtitle" style="margin-top: 24px;">本科生</h2>
+        <h2 id="undergrad" class="section-subtitle" style="margin-top: 24px;">本科生</h2>
         <div class="team-members" style="margin-top: 8px;">
           <div class="member-card"><h4 class="member-name">杨永祎</h4><p class="member-title">University of Michigan, PHD</p></div>
           <div class="member-card"><h4 class="member-name">戴宁</h4><p class="member-title">OSU, PHD</p></div>
@@ -312,7 +329,7 @@
           <div class="member-card"><h4 class="member-name">陈丹露</h4><p class="member-title">UCSD, PHD</p></div>
         </div>
 
-        <h2 class="section-subtitle" style="margin-top: 24px;">访问校友</h2>
+        <h2 id="visiting" class="section-subtitle" style="margin-top: 24px;">访问校友</h2>
         <div class="team-members" style="margin-top: 8px;">
           <div class="member-card"><h4 class="member-name">阚志刚</h4><p class="member-title">国防科技大学</p></div>
           <div class="member-card"><h4 class="member-name">胡明昊</h4><p class="member-title">国防科技大学</p></div>
@@ -323,16 +340,7 @@
         <!-- 历史硕士/博士内容已并入上面的“硕士生/博士生”分组 -->
       </section>
 
-      <nav class="container" aria-label="页面快速导航" style="margin-top: 16px; padding: 0;">
-        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-          <a class="btn btn-inline" href="#academia" data-i18n="alumniPage.nav.academia">学术界</a>
-          <a class="btn btn-inline" href="#industry" data-i18n="alumniPage.nav.industry">产业界</a>
-          <a class="btn btn-inline" href="#startup" data-i18n="alumniPage.nav.startup">创业者</a>
-          <a class="btn btn-inline" href="#research" data-i18n="alumniPage.nav.research">研究机构</a>
-          <a class="btn btn-inline" href="#directory" data-i18n="alumniPage.nav.directory">校友名录</a>
-          <a class="btn btn-inline" href="#contact" data-i18n="alumniPage.nav.contact">保持联系</a>
-        </div>
-      </nav>
+      
 
       <div class="highlight-grid" style="margin-top: 60px;">
         <article id="academia" class="highlight-card">
