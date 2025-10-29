@@ -16,11 +16,16 @@
     .alumni-dir .member-name { font-size: 15px; }
     .alumni-dir .member-title { font-size: 13px; }
     .year-badge { display: inline-block; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 4px 10px; box-shadow: 0 4px 10px var(--shadow-color); }
-    .toc-floating { position: fixed; right: 16px; top: 100px; width: 240px; background: var(--white); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 8px 20px var(--shadow-color); padding: 16px; z-index: 1000; }
-    .toc-floating h3 { margin: 0 0 10px; font-size: 16px; color: var(--fudan-blue); font-weight: 500; }
+    /* Left fixed sidebar */
+    .toc-sidebar { position: fixed; left: 0; top: 70px; width: 240px; height: calc(100vh - 80px); background: var(--mist); border-right: 1px solid var(--border); padding: 16px; z-index: 1000; overflow-y: auto; }
+    .toc-sidebar h3 { margin: 0 0 10px; font-size: 16px; color: var(--fudan-blue); font-weight: 500; }
     .toc-links { display: grid; gap: 8px; }
-    .toc-links a { display: block; text-align: center; }
-    @media (max-width: 1200px) { .toc-floating { display: none; } }
+    .toc-links a { display: block; text-align: left; }
+    @media (max-width: 1200px) { .toc-sidebar { display: none; } }
+    /* Prevent fixed navbar from covering anchors */
+    h2[id], h3.year-badge { scroll-margin-top: 110px; }
+    /* Shift main when sidebar visible */
+    @media (min-width: 1200px) { #alumni-main { margin-left: 260px; } }
   </style>
 </head>
 <body>
@@ -54,7 +59,7 @@
   </nav>
 
   <main>
-    <section class="container sec" style="padding-top: 40px;">
+    <section id="alumni-main" class="container sec" style="padding-top: 40px;">
       <nav aria-label="Breadcrumb" style="margin-bottom: 12px; font-size: 14px;">
         <a href="index.html" data-i18n="breadcrumb.home">首页</a>
         <span style="opacity:.6;"> / </span>
@@ -68,7 +73,7 @@
       </div>
       </div>
 
-      <aside class="toc-floating" aria-label="快速导航">
+      <aside class="toc-sidebar" aria-label="快速导航">
         <h3>目录</h3>
         <div class="toc-links">
           <a class="btn btn-inline" href="#faculty">在职教师</a>
@@ -89,10 +94,10 @@
         <h2 id="phd" class="section-subtitle">博士生</h2>
         <h3 class="year-badge" style="margin: 8px 0 8px; font-size: 16px; color: var(--text);">2024级</h3>
         <div class="team-members" style="margin-top: 8px;">
-          <div class="member-card"><h4 class="member-name">王思尹</h4><p class="member-title">卓博</p></div>
-          <div class="member-card"><h4 class="member-name">施君豪</h4><p class="member-title">直博</p></div>
-          <div class="member-card"><h4 class="member-name">李培基</h4><p class="member-title">直博</p></div>
-          <div class="member-card"><h4 class="member-name">李睿潇</h4><p class="member-title">卓博（共同导师：黄萱菁）</p></div>
+          <div class="member-card"><h4 class="member-name">王思尹</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">施君豪</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">李培基</h4><p class="member-title"></p></div>
+          <div class="member-card"><h4 class="member-name">李睿潇</h4><p class="member-title">（共同导师：黄萱菁）</p></div>
         </div>
 
         <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2023级</h3>
@@ -128,18 +133,18 @@
 
         <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2020级</h3>
         <div class="team-members">
-          <div class="member-card"><h4 class="member-name">李孝男</h4><p class="member-title">直博；毕业去向：USA Startup</p></div>
-          <div class="member-card"><h4 class="member-name">周云华</h4><p class="member-title">毕业去向：上海人工智能实验</p></div>
-          <div class="member-card"><h4 class="member-name">李世民</h4><p class="member-title">毕业去向：模思</p></div>
-          <div class="member-card"><h4 class="member-name">刘向阳</h4><p class="member-title">毕业去向：创业</p></div>
+          <div class="member-card"><h4 class="member-name">李孝男</h4><p class="member-title">USA Startup</p></div>
+          <div class="member-card"><h4 class="member-name">周云华</h4><p class="member-title">上海人工智能实验</p></div>
+          <div class="member-card"><h4 class="member-name">李世民</h4><p class="member-title">模思</p></div>
+          <div class="member-card"><h4 class="member-name">刘向阳</h4><p class="member-title">创业</p></div>
           <div class="member-card"><h4 class="member-name">罗琪</h4><p class="member-title"></p></div>
         </div>
 
         <h3 class="year-badge" style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2019级</h3>
         <div class="team-members">
-          <div class="member-card"><h4 class="member-name">颜航</h4><p class="member-title">毕业去向：上海人工智能实验室</p></div>
-          <div class="member-card"><h4 class="member-name">李林阳</h4><p class="member-title">毕业去向：上海人工智能实验室</p></div>
-          <div class="member-card"><h4 class="member-name">孙天祥</h4><p class="member-title">（共同导师：黄萱菁）；毕业去向：创业</p></div>
+          <div class="member-card"><h4 class="member-name">颜航</h4><p class="member-title">上海人工智能实验室</p></div>
+          <div class="member-card"><h4 class="member-name">李林阳</h4><p class="member-title">上海人工智能实验室</p></div>
+          <div class="member-card"><h4 class="member-name">孙天祥</h4><p class="member-title">（共同导师：黄萱菁），创业</p></div>
           <div class="member-card"><h4 class="member-name">郑逸宁</h4><p class="member-title"></p></div>
         </div>
 
@@ -155,12 +160,12 @@
 
         <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2014级</h3>
         <div class="team-members">
-          <div class="member-card"><h4 class="member-name">刘鹏飞</h4><p class="member-title">（共同导师：黄萱菁）；多项荣誉；毕业去向：CMU博后</p></div>
+          <div class="member-card"><h4 class="member-name">刘鹏飞</h4><p class="member-title">（共同导师：黄萱菁），CMU博后</p></div>
         </div>
 
         <h3 style="margin: 16px 0 8px; font-size: 16px; color: var(--text);">2013级</h3>
         <div class="team-members">
-          <div class="member-card"><h4 class="member-name">陈新驰</h4><p class="member-title">（共同导师：黄萱菁）；多项荣誉；毕业去向：爱丁堡大学博后</p></div>
+          <div class="member-card"><h4 class="member-name">陈新驰</h4><p class="member-title">（共同导师：黄萱菁），爱丁堡大学博后</p></div>
         </div>
 
         <h2 id="masters" class="section-subtitle" style="margin-top: 24px;">硕士生</h2>
@@ -335,83 +340,14 @@
           <div class="member-card"><h4 class="member-name">胡明昊</h4><p class="member-title">国防科技大学</p></div>
           <div class="member-card"><h4 class="member-name">王永</h4><p class="member-title">香港大学</p></div>
           <div class="member-card"><h4 class="member-name">郑人杰</h4><p class="member-title">同济大学</p></div>
-        </div>
+      </div>
 
         <!-- 历史硕士/博士内容已并入上面的“硕士生/博士生”分组 -->
       </section>
 
       
 
-      <div class="highlight-grid" style="margin-top: 60px;">
-        <article id="academia" class="highlight-card">
-          <h3 data-i18n="alumniPage.academia.title">学术界</h3>
-          <p data-i18n="alumniPage.academia.desc">我们的校友在 MIT、Stanford、UC Berkeley、CMU、清华大学、北京大学等世界顶尖大学担任教职或继续深造。</p>
-        </article>
-        
-        <article id="industry" class="highlight-card">
-          <h3 data-i18n="alumniPage.industry.title">产业界</h3>
-          <p data-i18n="alumniPage.industry.desc">校友在 ByteDance、Alibaba、Tencent、Huawei、AWS、Google、Meta 等领先科技公司从事前沿 AI 研究和开发工作。</p>
-        </article>
-        
-        <article id="startup" class="highlight-card">
-          <h3 data-i18n="alumniPage.startup.title">创业者</h3>
-          <p data-i18n="alumniPage.startup.desc">许多校友创办了自己的 AI 初创公司，以创始人、CEO 和 CTO 的身份推动人工智能技术的商业化应用。</p>
-        </article>
-        
-        <article id="research" class="highlight-card">
-          <h3 data-i18n="alumniPage.research.title">研究机构</h3>
-          <p data-i18n="alumniPage.research.desc">校友在各类研究机构和实验室担任重要职位，继续在 NLP、CV、ML 等领域进行突破性研究。</p>
-        </article>
-      </div>
-
-      <section id="directory" class="sec" style="padding-top: 20px;">
-        <h2 data-i18n="alumniPage.directory.title">校友名录（节选）</h2>
-        <p class="lead" data-i18n="alumniPage.directory.desc">以下为部分校友及其去向。欢迎校友<a href="#contact">补充/更新信息</a>。</p>
-
-        <h3 class="section-subtitle" data-i18n="alumniPage.directory.academia">学术去向</h3>
-        <div class="team-members" style="margin-bottom: 40px;">
-          <div class="member-card">
-            <h4 class="member-name">张三</h4>
-            <p class="member-title">PhD @ MIT CSAIL</p>
-          </div>
-          <div class="member-card">
-            <h4 class="member-name">李四</h4>
-            <p class="member-title">Assistant Professor @ Tsinghua</p>
-          </div>
-          <div class="member-card">
-            <h4 class="member-name">王五</h4>
-            <p class="member-title">Postdoc @ Stanford AI Lab</p>
-          </div>
-        </div>
-
-        <h3 class="section-subtitle" data-i18n="alumniPage.directory.industry">产业去向</h3>
-        <div class="team-members" style="margin-bottom: 40px;">
-          <div class="member-card">
-            <h4 class="member-name">赵六</h4>
-            <p class="member-title">Research Scientist @ Google DeepMind</p>
-          </div>
-          <div class="member-card">
-            <h4 class="member-name">钱七</h4>
-            <p class="member-title">Applied Scientist @ AWS AI</p>
-          </div>
-          <div class="member-card">
-            <h4 class="member-name">孙八</h4>
-            <p class="member-title">Senior Engineer @ ByteDance</p>
-          </div>
-        </div>
-
-        <h3 class="section-subtitle" data-i18n="alumniPage.directory.startup">创业与研究机构</h3>
-        <div class="team-members">
-          <div class="member-card">
-            <h4 class="member-name">周九</h4>
-            <p class="member-title">Co-founder & CTO @ AI Startup</p>
-          </div>
-          <div class="member-card">
-            <h4 class="member-name">吴十</h4>
-            <p class="member-title">Researcher @ AI Institute</p>
-          </div>
-        </div>
-      </section>
+      
 
       <div id="contact" style="margin-top: 80px; background-color: var(--mist); padding: 40px; border-radius: 12px;">
         <h2 data-i18n="alumniPage.network.title">保持联系</h2>
