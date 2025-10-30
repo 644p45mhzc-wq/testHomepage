@@ -29,11 +29,11 @@
 
       'hero.subtitle': 'OpenMOSS Lab',
       'hero.title': '构建值得信赖的开放基础模型，服务社会',
-      'hero.description': '在<span class="highlight">邱锡鹏</span>教授的带领下，OpenMOSS Lab 推进跨越语言、多模态智能和具身智能体的大规模 AI 系统研究。我们设计开源模型、工具和理论，将 AI 与现实世界影响相结合。',
+      'hero.description': 'OpenMOSS（模思）团队专注于开放、可验证与负责任人工智能研究。我们关注大规模智能系统的发展规律，致力于构建从基础理论、训练方法到系统实现的全链条研究体系。重点研究领域包括预训练模型、推理与对齐、多模态理解、具身智能与智能体协同等方向。<br>我们的核心目标是推动人工智能的可信演化与广泛落地，使前沿研究成果真正转化为提升生产力、促进社会发展与拓展人类能力的技术基础。我们秉持开放合作与长期主义，与国际一流高校及行业龙头企业开展深度科研合作。<br>团队成员在人工智能领域具有坚实积累，培养的毕业生任职或深造于 MIT、UC Berkeley、CMU 等世界顶尖高校，或加入 ByteDance、Alibaba、AWS、Optiver 等领先企业，或投身创新创业，或步入学术教职岗位，形成了充满活力的学术与创新生态。',
       'hero.cta1': '加入我们',
       'hero.cta2': '最新亮点',
       'hero.focus.title': '我们的研究重点',
-      'hero.focus.item1': '开源基础模型',
+      'hero.focus.item1': '大型开源基础模型',
       'hero.focus.item2': '多模态学习与推理',
       'hero.focus.item3': '具身智能与智能体',
       'hero.focus.item4': '负责任的安全部署',
