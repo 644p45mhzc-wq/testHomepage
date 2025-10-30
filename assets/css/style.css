@@ -80,6 +80,11 @@ li {
   margin-bottom: 0px;
 }
 
+/* English homepage: move right-side blocks down to avoid overlapping title */
+html[lang="en"] .hero-side {
+  margin-top: 56px;
+}
+
 .container {
   width: min(1100px, calc(100% - 40px));
   margin: 0 auto;
@@ -420,11 +425,6 @@ nav.navbar {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.member-card:hover {
-  transform: translateY(-4px);
 }
 
 .member-photo {
@@ -435,13 +435,12 @@ nav.navbar {
   border: 3px solid var(--fudan-blue-90);
   box-shadow: 0 4px 12px var(--shadow-color);
   margin-bottom: 16px;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.member-card:hover .member-photo {
-  transform: scale(1.08);
-  box-shadow: 0 8px 24px rgba(14, 65, 156, 0.35);
-  border-color: var(--fudan-blue-80);
+.member-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(14, 65, 156, 0.25);
 }
 
 .member-name {
@@ -457,23 +456,6 @@ nav.navbar {
   margin: 0;
   font-weight: 300;
 }
-
-.member-research,
-.member-affiliation,
-.member-year {
-  font-size: 13px;
-  color: var(--text-soft);
-  margin: 6px 0 0;
-  line-height: 1.4;
-}
-
-.member-year {
-  font-size: 12px;
-  color: var(--fudan-blue);
-  font-weight: 500;
-}
-
-/* 移除member-links样式，改为卡片整体可点击 */
 
 .people-sections {
   display: grid;
