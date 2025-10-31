@@ -20,11 +20,10 @@
   // 国际化翻译系统
   const translations = {
     'zh-CN': {
-      'nav.about': '关于',
       'nav.research': '研究方向',
-      'nav.highlights': '实验室亮点',
+      'nav.highlights': '最新亮点',
       'nav.people': '团队成员',
-      'nav.resources': '资源',
+      'nav.resources': '开放资源',
       'nav.join': '加入我们',
 
       'hero.subtitle': 'OpenMOSS Lab',
@@ -258,18 +257,17 @@
       'resourcesPage.backHome': '返回首页'
     },
     'en': {
-      'nav.about': 'About',
       'nav.research': 'Research',
       'nav.highlights': 'Highlights',
       'nav.people': 'People',
-      'nav.resources': 'Resources',
+      'nav.resources': 'Open Resources',
       'nav.join': 'Join',
 
       'hero.subtitle': 'OpenMOSS Lab',
       'hero.title': 'Building trustworthy, open foundation models that serve society.',
       'hero.description': 'OpenMOSS focuses on open, verifiable, and responsible AI research. We study the development laws of large-scale intelligent systems and build an end-to-end research stack spanning fundamental theory, training methods, and system implementation, with key areas including pretraining, reasoning and alignment, multimodal understanding, embodied intelligence, and agent collaboration.<br>Our core goal is to drive trustworthy evolution and broad deployment of AI, translating frontier research into the technological foundation that boosts productivity, advances society, and augments human capabilities. We uphold openness, collaboration, and long-termism, partnering deeply with leading universities and industry pioneers worldwide.<br>Our team has strong experience in AI. Graduates continue at world-class universities such as MIT, UC Berkeley, and CMU, join leading companies including ByteDance, Alibaba, AWS, and Optiver, found startups, or take faculty positions—forming a vibrant academic and innovation ecosystem.',
       'hero.cta1': 'Join Us',
-      'hero.cta2': 'Latest Highlights',
+      'hero.cta2': 'Highlights',
       'hero.focus.title': 'What We Focus On',
       'hero.focus.item1': 'Large-scale open foundation models',
       'hero.focus.item2': 'Multimodal learning & reasoning',
