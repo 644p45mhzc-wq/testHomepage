@@ -20,10 +20,11 @@
   // 国际化翻译系统
   const translations = {
     'zh-CN': {
+      'nav.about': '关于',
       'nav.research': '研究方向',
-      'nav.highlights': '最新亮点',
+      'nav.highlights': '实验室亮点',
       'nav.people': '团队成员',
-      'nav.resources': '开放资源',
+      'nav.resources': '资源',
       'nav.join': '加入我们',
 
       'hero.subtitle': 'OpenMOSS Lab',
@@ -139,6 +140,12 @@
 
       // People Page
       'peoplePage.title': '团队成员',
+      'peoplePage.teamMembers': '团队成员',
+      'peoplePage.postdocs': '博士后',
+      'peoplePage.phdStudents': '博士研究生',
+      'peoplePage.masterStudents': '硕士研究生',
+      'peoplePage.undergraduates': '本科生',
+      'peoplePage.visitingStudents': '访问学生',
       'peoplePage.students': '学生与访问学者',
       'peoplePage.studentsDesc': '研究生、博士生、访问学者和行业研究员共同推动大规模 AI 系统和社会应用的边界。我们的团队包括来自世界各地的优秀研究人员，他们在自然语言处理、计算机视觉、机器学习等领域进行前沿研究。',
       'peoplePage.contactInfo': '如需了解更多团队信息或加入我们，请联系：<a href="mailto:xpqiu@fudan.edu.cn">xpqiu@fudan.edu.cn</a>',
@@ -257,19 +264,20 @@
       'resourcesPage.backHome': '返回首页'
     },
     'en': {
+      'nav.about': 'About',
       'nav.research': 'Research',
       'nav.highlights': 'Highlights',
       'nav.people': 'People',
-      'nav.resources': 'Open Resources',
+      'nav.resources': 'Resources',
       'nav.join': 'Join',
 
       'hero.subtitle': 'OpenMOSS Lab',
       'hero.title': 'Building trustworthy, open foundation models that serve society.',
-      'hero.description': 'OpenMOSS focuses on open, verifiable, and responsible AI research. We study the development laws of large-scale intelligent systems and build an end-to-end research stack spanning fundamental theory, training methods, and system implementation, with key areas including pretraining, reasoning and alignment, multimodal understanding, embodied intelligence, and agent collaboration.<br>Our core goal is to drive trustworthy evolution and broad deployment of AI, translating frontier research into the technological foundation that boosts productivity, advances society, and augments human capabilities. We uphold openness, collaboration, and long-termism, partnering deeply with leading universities and industry pioneers worldwide.<br>Our team has strong experience in AI. Graduates continue at world-class universities such as MIT, UC Berkeley, and CMU, join leading companies including ByteDance, Alibaba, AWS, and Optiver, found startups, or take faculty positions—forming a vibrant academic and innovation ecosystem.',
-      'hero.cta1': 'Join Us',
-      'hero.cta2': 'Highlights',
+      'hero.description': 'Led by Prof. <span class="highlight">Xipeng Qiu</span>, OpenMOSS Lab advances large-scale AI systems spanning language, multimodal intelligence, and embodied agents. We design open-source models, tools, and theory that ground AI in real-world impact.',
+      'hero.cta1': 'Work With Us',
+      'hero.cta2': 'Latest Highlights',
       'hero.focus.title': 'What We Focus On',
-      'hero.focus.item1': 'Large-scale open foundation models',
+      'hero.focus.item1': 'Open-source foundation models',
       'hero.focus.item2': 'Multimodal learning & reasoning',
       'hero.focus.item3': 'Embodied intelligence & agents',
       'hero.focus.item4': 'Responsible, safe deployment',
@@ -376,6 +384,12 @@
 
       // People Page
       'peoplePage.title': 'People',
+      'peoplePage.teamMembers': 'Team Members',
+      'peoplePage.postdocs': 'Postdoctoral Researchers',
+      'peoplePage.phdStudents': 'PhD Students',
+      'peoplePage.masterStudents': 'Master Students',
+      'peoplePage.undergraduates': 'Undergraduates',
+      'peoplePage.visitingStudents': 'Visiting Students',
       'peoplePage.students': 'Students & Fellows',
       'peoplePage.studentsDesc': 'Graduate researchers, doctoral students, visiting scholars, and industry fellows push the boundaries of large-scale AI systems and societal deployment. Our team includes outstanding researchers from around the world conducting cutting-edge research in natural language processing, computer vision, machine learning, and more.',
       'peoplePage.contactInfo': 'For more information about our team or to join us, please contact: <a href="mailto:xpqiu@fudan.edu.cn">xpqiu@fudan.edu.cn</a>',
@@ -531,11 +545,147 @@
     });
   }
 
-  // 页面加载时应用语言
+  // ============================================
+  // 团队成员动态渲染
+  // ============================================
+
+  // 创建成员卡片HTML
+  function createMemberCard(member, lang, isStudent = false) {
+    const info = getMemberInfo(member, lang);
+    const card = document.createElement('div');
+    card.className = 'member-card';
+
+    // 如果有主页，整个卡片可点击
+    if (info.homepage) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function () {
+        window.open(info.homepage, '_blank');
+      });
+    }
+
+    let html = `
+      <img src="${info.photo}" alt="${info.name}" class="member-photo" onerror="this.src='assets/img/default-avatar.svg'">
+      <h4 class="member-name">${info.name}</h4>
+    `;
+
+    // 学生模式：只显示姓名和头像，不显示职称、年份、研究方向等
+    if (!isStudent) {
+      if (info.title) {
+        html += `<p class="member-title">${info.title}</p>`;
+      }
+
+      // 添加额外信息（研究方向、年份等）
+      if (info.research) {
+        html += `<p class="member-research">${info.research}</p>`;
+      }
+
+      if (info.year) {
+        html += `<p class="member-year">${info.year}</p>`;
+      }
+
+      if (info.affiliation) {
+        html += `<p class="member-affiliation">${info.affiliation}</p>`;
+      }
+    }
+
+    card.innerHTML = html;
+    return card;
+  }
+
+  // 渲染成员列表
+  function renderMembers(containerSelector, members, lang, isStudent = false) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+
+    // 清空容器
+    container.innerHTML = '';
+
+    // 添加成员卡片
+    members.forEach(member => {
+      const card = createMemberCard(member, lang, isStudent);
+      container.appendChild(card);
+    });
+  }
+
+  // 渲染所有团队成员（用于people.html）
+  function renderAllTeamMembers(lang) {
+    // 渲染核心成员
+    if (teamData.coreMembers && teamData.coreMembers.length > 0) {
+      renderMembers('#core-members-container', teamData.coreMembers, lang, false);
+    }
+
+    // 渲染团队成员（工程师和科研助理）
+    if (teamData.teamMembers && teamData.teamMembers.length > 0) {
+      renderMembers('#team-members-container', teamData.teamMembers, lang, false);
+    }
+
+    // 渲染博士后
+    if (teamData.postdocs && teamData.postdocs.length > 0) {
+      renderMembers('#postdocs-container', teamData.postdocs, lang, false);
+    }
+
+    // 渲染博士生（学生模式：不显示职称等）
+    if (teamData.phdStudents && teamData.phdStudents.length > 0) {
+      renderMembers('#phd-students-container', teamData.phdStudents, lang, true);
+    }
+
+    // 渲染硕士生（学生模式）
+    if (teamData.masterStudents && teamData.masterStudents.length > 0) {
+      renderMembers('#master-students-container', teamData.masterStudents, lang, true);
+    }
+
+    // 渲染本科生（学生模式）
+    if (teamData.undergraduates && teamData.undergraduates.length > 0) {
+      renderMembers('#undergraduates-container', teamData.undergraduates, lang, true);
+    }
+
+    // 渲染访问学生（学生模式）
+    if (teamData.visitingStudents && teamData.visitingStudents.length > 0) {
+      renderMembers('#visiting-students-container', teamData.visitingStudents, lang, true);
+    }
+  }
+
+  // 初始化成员列表
+  function initTeamMembers() {
+    // 检查是否有teamData（从data.js加载）
+    if (typeof teamData === 'undefined') {
+      console.warn('Team data not loaded. Make sure data.js is included before main.js');
+      return;
+    }
+
+    // 首页：只显示核心成员
+    const indexCoreContainer = document.querySelector('#core-members-home');
+    if (indexCoreContainer) {
+      renderMembers('#core-members-home', teamData.coreMembers, currentLang);
+    }
+
+    // people.html：显示所有成员
+    const peoplePage = document.querySelector('body.people-page');
+    if (peoplePage) {
+      renderAllTeamMembers(currentLang);
+    }
+  }
+
+  // 页面加载时应用语言和渲染成员
   translate(currentLang);
+  initTeamMembers();
 
   // 更新年份（在翻译后再更新一次）
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
+  }
+
+  // 重新绑定语言切换功能，确保切换语言时重新渲染成员
+  const originalLangToggle = langToggle;
+  if (originalLangToggle) {
+    // 移除旧的事件监听器，添加新的
+    const newLangToggle = originalLangToggle.cloneNode(true);
+    originalLangToggle.parentNode.replaceChild(newLangToggle, originalLangToggle);
+
+    newLangToggle.addEventListener('click', function () {
+      const newLang = currentLang === 'zh-CN' ? 'en' : 'zh-CN';
+      translate(newLang);
+      initTeamMembers(); // 重新渲染成员
+    });
   }
 })();
