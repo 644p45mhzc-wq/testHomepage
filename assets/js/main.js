@@ -20,11 +20,10 @@
   // 国际化翻译系统
   const translations = {
     'zh-CN': {
-      'nav.about': '关于',
       'nav.research': '研究方向',
-      'nav.highlights': '实验室亮点',
+      'nav.highlights': '最新亮点',
       'nav.people': '团队成员',
-      'nav.resources': '资源',
+      'nav.resources': '开放资源',
       'nav.join': '加入我们',
 
       'hero.subtitle': 'OpenMOSS Lab',
