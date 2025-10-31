@@ -138,6 +138,11 @@
       'footer.archive': '档案',
       'footer.copyright': '&copy; <span id="year"></span> OpenMOSS Lab. 设计灵感来自 Stanford CS224N.',
 
+      // Breadcrumb
+      'breadcrumb.home': '首页',
+      'breadcrumb.people': '团队成员',
+      'breadcrumb.alumni': '<strong>校友介绍</strong>',
+
       // People Page
       'peoplePage.title': '团队成员',
       'peoplePage.students': '学生与访问学者',
@@ -163,6 +168,7 @@
       'alumniPage.network.item3': '与在读学生分享经验和职业建议',
       'alumniPage.network.item4': '开展合作研究项目和产学研合作',
       'alumniPage.network.contact': '如需更新您的联系方式或了解校友活动，请联系：<a href="mailto:xpqiu@fudan.edu.cn">xpqiu@fudan.edu.cn</a>',
+      'alumniPage.backPeople': '查看团队成员',
       'alumniPage.backHome': '返回首页',
 
       // Positions Page
@@ -376,6 +382,11 @@
       'footer.archive': 'Archive',
       'footer.copyright': '&copy; <span id="year"></span> OpenMOSS Lab. Designed with inspiration from Stanford CS224N.',
 
+      // Breadcrumb
+      'breadcrumb.home': 'Home',
+      'breadcrumb.people': 'People',
+      'breadcrumb.alumni': '<strong>Alumni</strong>',
+
       // People Page
       'peoplePage.title': 'People',
       'peoplePage.students': 'Students & Fellows',
@@ -401,6 +412,7 @@
       'alumniPage.network.item3': 'Share experiences and career advice with current students',
       'alumniPage.network.item4': 'Engage in collaborative research and industry-academia partnerships',
       'alumniPage.network.contact': 'To update your contact information or learn about alumni activities, please contact: <a href="mailto:xpqiu@fudan.edu.cn">xpqiu@fudan.edu.cn</a>',
+      'alumniPage.backPeople': 'View Team Members',
       'alumniPage.backHome': 'Back to Home',
 
       // Positions Page
@@ -500,6 +512,64 @@
   // 默认语言为中文
   let currentLang = localStorage.getItem('lang') || 'zh-CN';
 
+  // 校友页面渲染函数
+  function renderAlumniList(category, containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container || !teamData[category]) return;
+
+    const alumniList = teamData[category];
+    const langKey = currentLang === 'zh-CN' ? 'zh' : 'en';
+
+    // 按年份排序（降序）
+    const sortedAlumni = [...alumniList].sort((a, b) => (b.year || 0) - (a.year || 0));
+
+    // 按年份分组
+    const groupedByYear = {};
+    sortedAlumni.forEach(alumni => {
+      const year = alumni.year || '未知';
+      if (!groupedByYear[year]) {
+        groupedByYear[year] = [];
+      }
+      groupedByYear[year].push(alumni);
+    });
+
+    // 生成 HTML
+    const years = Object.keys(groupedByYear).sort((a, b) => {
+      if (a === '未知') return 1;
+      if (b === '未知') return -1;
+      return b - a;
+    });
+
+    let html = '';
+    years.forEach(year => {
+      const alumniInYear = groupedByYear[year];
+      html += `<div style="margin-bottom: 16px;">`;
+      html += `<h3 class="year-badge" style="margin-bottom: 8px;">${year}</h3>`;
+      alumniInYear.forEach(alumni => {
+        const name = alumni.name[langKey] || alumni.name.zh;
+        const destination = alumni.destination ? (alumni.destination[langKey] || alumni.destination.zh) : '';
+        html += `<div class="alumni-row">`;
+        html += `<span class="name">${name}</span>`;
+        html += `<span class="destination">${destination}</span>`;
+        html += `</div>`;
+      });
+      html += `</div>`;
+    });
+
+    container.innerHTML = html;
+  }
+
+  // 渲染所有校友列表
+  function renderAllAlumniLists() {
+    if (window.location.pathname.includes('alumni.html') || document.querySelector('.alumni-list')) {
+      renderAlumniList('alumniPostdocs', '#postdocs + .alumni-list');
+      renderAlumniList('alumniPhd', '#phd + .alumni-list');
+      renderAlumniList('alumniMasters', '#masters + .alumni-list');
+      renderAlumniList('alumniUndergrad', '#undergrad + .alumni-list');
+      renderAlumniList('alumniVisiting', '#visiting + .alumni-list');
+    }
+  }
+
   // 翻译函数
   function translate(lang) {
     const elements = document.querySelectorAll('[data-i18n]');
@@ -522,6 +592,9 @@
     // 保存到 localStorage
     localStorage.setItem('lang', lang);
     currentLang = lang;
+
+    // 如果是在校友页面，重新渲染校友列表以更新语言
+    renderAllAlumniLists();
   }
 
   // 语言切换按钮
@@ -540,4 +613,7 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  // 页面加载时渲染校友列表
+  renderAllAlumniLists();
 })();
