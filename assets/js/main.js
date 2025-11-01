@@ -576,17 +576,17 @@
     const card = document.createElement('div');
     card.className = 'member-card';
 
-    // 如果有主页，整个卡片可点击
+    // 构建名字HTML - 如果有主页则添加链接和特殊样式
+    let nameHtml;
     if (info.homepage) {
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', function () {
-        window.open(info.homepage, '_blank');
-      });
+      nameHtml = `<h4 class="member-name member-name-link"><a href="${info.homepage}" target="_blank" rel="noopener noreferrer">${info.name}</a></h4>`;
+    } else {
+      nameHtml = `<h4 class="member-name">${info.name}</h4>`;
     }
 
     let html = `
       <img src="${info.photo}" alt="${info.name}" class="member-photo" onerror="this.src='assets/img/default-avatar.svg'">
-      <h4 class="member-name">${info.name}</h4>
+      ${nameHtml}
     `;
 
     // 学生模式：只显示姓名和头像，不显示职称、年份、研究方向等
