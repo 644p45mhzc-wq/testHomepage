@@ -710,14 +710,12 @@ nav.navbar {
   gap: 24px;
   padding: 8px 0;
   font-size: 15px;
-  border-bottom: 1px solid rgba(197, 212, 239, 0.3);
   transition: background-color 0.2s ease;
 }
 
 .alumni-row:hover {
   background-color: rgba(241, 245, 255, 0.5);
   border-radius: 6px;
-  padding-left: 8px;
 }
 
 .alumni-row .name {
