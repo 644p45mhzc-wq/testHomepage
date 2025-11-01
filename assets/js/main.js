@@ -28,7 +28,7 @@
 
       'hero.subtitle': 'OpenMOSS Lab',
       'hero.title': '构建值得信赖的开放基础模型，服务社会',
-      'hero.description': 'OpenMOSS（模思）团队专注于开放、可验证与负责任人工智能研究。我们关注大规模智能系统的发展规律，致力于构建从基础理论、训练方法到系统实现的全链条研究体系。重点研究领域包括预训练模型、推理与对齐、多模态理解、具身智能与智能体协同等方向。<br>我们的核心目标是推动人工智能的可信演化与广泛落地，使前沿研究成果真正转化为提升生产力、促进社会发展与拓展人类能力的技术基础。我们秉持开放合作与长期主义，与国际一流高校及行业龙头企业开展深度科研合作。<br>团队成员在人工智能领域具有坚实积累，培养的毕业生任职或深造于 MIT、UC Berkeley、CMU 等世界顶尖高校，或加入 ByteDance、Alibaba、AWS、Optiver 等领先企业，或投身创新创业，或步入学术教职岗位，形成了充满活力的学术与创新生态。',
+      'hero.description': 'OpenMOSS（模思）团队专注于开放、可验证与负责任人工智能研究。我们关注大规模智能系统的发展规律，致力于构建从基础理论、训练方法到系统实现的全链条研究体系。重点研究领域包括预训练模型、推理与对齐、多模态理解、具身智能与智能体协同等方向。<br><br>我们的核心目标是推动人工智能的可信演化与广泛落地，使前沿研究成果真正转化为提升生产力、促进社会发展与拓展人类能力的技术基础。我们秉持开放合作与长期主义，与国际一流高校及行业龙头企业开展深度科研合作。<br><br>团队成员在人工智能领域具有坚实积累，培养的毕业生任职或深造于 MIT、UC Berkeley、CMU 等世界顶尖高校，或加入 ByteDance、Alibaba、AWS、Optiver 等领先企业，或投身创新创业，或步入学术教职岗位，形成了充满活力的学术与创新生态。',
       'hero.cta1': '加入我们',
       'hero.cta2': '最新亮点',
       'hero.focus.title': '我们的研究重点',
@@ -86,7 +86,7 @@
       'highlights.talent.desc': '校友在顶尖大学担任教职，并以创始人、CEO 和 CTO 的身份加入知名 AI 初创公司。',
 
       'people.title': '团队成员',
-      'people.core': '核心成员',
+      'people.core': '教职成员',
       'people.member1.name': '邱锡鹏',
       'people.member1.title': '教授，实验室主任',
       'people.member2.name': '陈新驰',
@@ -139,7 +139,7 @@
 
       // People Page
       'peoplePage.title': '团队成员',
-      'peoplePage.teamMembers': '团队成员',
+      'peoplePage.teamMembers': '全职成员',
       'peoplePage.postdocs': '博士后',
       'peoplePage.phdStudents': '博士研究生',
       'peoplePage.masterStudents': '硕士研究生',
@@ -283,7 +283,7 @@
 
       'hero.subtitle': 'OpenMOSS Lab',
       'hero.title': 'Building trustworthy, open foundation models that serve society.',
-      'hero.description': 'Led by Prof. <span class="highlight">Xipeng Qiu</span>, OpenMOSS Lab advances large-scale AI systems spanning language, multimodal intelligence, and embodied agents. We design open-source models, tools, and theory that ground AI in real-world impact.',
+      'hero.description': 'The OpenMOSS team focuses on open, verifiable, and responsible artificial intelligence research. We study the development patterns of large-scale intelligent systems and are committed to building a complete research framework from fundamental theory, training methods to system implementation. Our key research areas include pre-training models, reasoning and alignment, multimodal understanding, embodied intelligence, and agent collaboration.<br><br>Our core objective is to advance the trustworthy evolution and widespread deployment of AI, transforming cutting-edge research into technological foundations that enhance productivity, promote social development, and expand human capabilities. We adhere to open collaboration and long-termism, conducting deep research partnerships with world-class universities and leading enterprises.<br><br>Our team members have solid expertise in artificial intelligence. Our graduates work or pursue further studies at top universities such as MIT, UC Berkeley, and CMU, join leading companies like ByteDance, Alibaba, AWS, and Optiver, engage in innovation and entrepreneurship, or take up academic faculty positions, forming a vibrant academic and innovation ecosystem.',
       'hero.cta1': 'Work With Us',
       'hero.cta2': 'Latest Highlights',
       'hero.focus.title': 'What We Focus On',
