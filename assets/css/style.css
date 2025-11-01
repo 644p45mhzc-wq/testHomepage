@@ -662,3 +662,199 @@ nav.navbar {
     font-size: 13px;
   }
 }
+
+/* ============================================ */
+/* Alumni Page Styles */
+/* ============================================ */
+
+/* Alumni main container alignment */
+#alumni-main.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: min(1100px, calc(100% - 40px));
+  padding-top: 100px;
+}
+
+/* Breadcrumb */
+.alumni-breadcrumb {
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.alumni-breadcrumb a {
+  color: var(--fudan-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.alumni-breadcrumb a:hover {
+  color: var(--fudan-blue-80);
+  text-decoration: underline;
+}
+
+/* Alumni list layout */
+.alumni-list {
+  display: grid;
+  gap: 2px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.alumni-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 8px 0;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(197, 212, 239, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.alumni-row:hover {
+  background-color: rgba(241, 245, 255, 0.5);
+  border-radius: 6px;
+  padding-left: 8px;
+}
+
+.alumni-row .name {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.alumni-row .destination {
+  color: var(--text-soft);
+  font-weight: 300;
+}
+
+/* Floating sidebar (Table of Contents) */
+.toc-sidebar {
+  position: fixed;
+  right: 24px;
+  top: 100px;
+  width: 180px;
+  max-height: calc(100vh - 140px);
+  background: rgba(241, 245, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 100;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(14, 65, 156, 0.15);
+}
+
+.toc-sidebar h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  color: var(--fudan-blue);
+  font-weight: 500;
+}
+
+.toc-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toc-links a {
+  display: block;
+  text-align: left;
+  padding: 8px 12px;
+  color: var(--fudan-blue);
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toc-links a:hover {
+  background: rgba(14, 65, 156, 0.1);
+  text-decoration: none;
+  padding-left: 16px;
+}
+
+.back-to-top {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  background: var(--fudan-blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-to-top:hover {
+  background: var(--fudan-blue-dark);
+}
+
+/* Prevent fixed navbar from covering anchors */
+h2[id],
+h3.year-badge {
+  scroll-margin-top: 110px;
+}
+
+/* Alumni section spacing */
+.alumni-dir {
+  margin-top: 24px;
+}
+
+.alumni-dir .section-subtitle {
+  margin-top: 48px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.alumni-dir .section-subtitle:first-of-type {
+  margin-top: 24px;
+}
+
+/* Responsive design for alumni page */
+@media (max-width: 1280px) {
+  .toc-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .alumni-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 12px 8px;
+  }
+
+  .alumni-row .name {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .alumni-row .destination {
+    font-size: 14px;
+  }
+
+  #alumni-main.container {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 560px) {
+  .alumni-row {
+    font-size: 14px;
+  }
+
+  .alumni-row .name {
+    font-size: 15px;
+  }
+
+  .alumni-row .destination {
+    font-size: 13px;
+  }
+}
