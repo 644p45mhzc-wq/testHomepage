@@ -1,6 +1,7 @@
 // OpenMOSS Lab 校友页面主要逻辑
 // 负责渲染校友数据和处理交互
 
+
 (function () {
   'use strict';
 
