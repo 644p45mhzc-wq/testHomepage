@@ -450,6 +450,20 @@ nav.navbar {
   margin-bottom: 6px;
 }
 
+/* 有链接的成员名字样式 */
+.member-name-link a {
+  color: var(--fudan-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.member-name-link a:hover {
+  color: var(--text-soft);
+  transform: scale(1.08);
+  text-decoration: none;
+}
+
 .member-title {
   font-size: 14px;
   color: var(--text-soft);
