@@ -80,10 +80,7 @@ li {
   margin-bottom: 0px;
 }
 
-/* English homepage: move right-side blocks down to avoid overlapping title */
-html[lang="en"] .hero-side {
-  margin-top: 56px;
-}
+/* English homepage: no longer needed as hero-side removed */
 
 .container {
   width: min(1100px, calc(100% - 40px));
@@ -226,12 +223,26 @@ nav.navbar {
   align-items: center;
 }
 
+.hero-full {
+  max-width: 100%;
+}
+
+.hero-full h1 {
+  margin-bottom: 24px;
+}
+
+.hero-full .lead {
+  max-width: 100%;
+  margin-bottom: 32px;
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 500;
+  font-size: 13px;
   color: var(--fudan-blue);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .lead {
@@ -591,10 +602,6 @@ nav.navbar {
     grid-template-columns: 1fr;
   }
 
-  .hero-side {
-    order: -1;
-  }
-
   .cta-content {
     flex-direction: column;
     align-items: flex-start;
@@ -660,10 +667,6 @@ nav.navbar {
 
   h2 {
     font-size: 24px;
-  }
-
-  .hero-meta {
-    grid-template-columns: 1fr;
   }
 
   .nav-links {
