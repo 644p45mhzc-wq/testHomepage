@@ -152,6 +152,16 @@
 
       // Alumni Page
       'alumniPage.title': '校友网络',
+      'alumniPage.breadcrumb.home': '首页',
+      'alumniPage.breadcrumb.people': '团队成员',
+      'alumniPage.breadcrumb.alumni': '校友介绍',
+      'alumniPage.backToTop': '回到顶部',
+      'alumniPage.toc': '目录',
+      'alumniPage.postdocs': '博士后',
+      'alumniPage.phd': '博士生',
+      'alumniPage.masters': '硕士生',
+      'alumniPage.undergrad': '本科生',
+      'alumniPage.visiting': '访问学生',
       'alumniPage.intro': 'OpenMOSS Lab 为培养了众多优秀的研究人员和工程师而自豪。我们的校友遍布学术界和工业界，在世界各地的顶尖机构和公司中发挥着重要作用。',
       'alumniPage.academia.title': '学术界',
       'alumniPage.academia.desc': '我们的校友在 MIT、Stanford、UC Berkeley、CMU、清华大学、北京大学等世界顶尖大学担任教职或继续深造。',
@@ -168,6 +178,7 @@
       'alumniPage.network.item3': '与在读学生分享经验和职业建议',
       'alumniPage.network.item4': '开展合作研究项目和产学研合作',
       'alumniPage.network.contact': '如需更新您的联系方式或了解校友活动，请联系：<a href="mailto:xpqiu@fudan.edu.cn">xpqiu@fudan.edu.cn</a>',
+      'alumniPage.backPeople': '查看团队成员',
       'alumniPage.backHome': '返回首页',
 
       // Positions Page
@@ -330,7 +341,7 @@
       'highlights.talent.desc': 'Alumni earn faculty positions at leading universities and join prominent AI startups as founders, CEOs, and CTOs.',
 
       'people.title': 'People',
-      'people.core': 'Core Members',
+      'people.core': 'Faculty',
       'people.member1.name': 'Xipeng Qiu',
       'people.member1.title': 'Professor, Lab Director',
       'people.member2.name': 'Xinchi Chen',
@@ -383,7 +394,7 @@
 
       // People Page
       'peoplePage.title': 'People',
-      'peoplePage.teamMembers': 'Team Members',
+      'peoplePage.teamMembers': 'Staff',
       'peoplePage.postdocs': 'Postdoctoral Researchers',
       'peoplePage.phdStudents': 'PhD Students',
       'peoplePage.masterStudents': 'Master Students',
@@ -396,6 +407,16 @@
 
       // Alumni Page
       'alumniPage.title': 'Alumni Network',
+      'alumniPage.breadcrumb.home': 'Home',
+      'alumniPage.breadcrumb.people': 'People',
+      'alumniPage.breadcrumb.alumni': 'Alumni',
+      'alumniPage.backToTop': 'Back to Top',
+      'alumniPage.toc': 'Table of Contents',
+      'alumniPage.postdocs': 'Postdoctoral Researchers',
+      'alumniPage.phd': 'PhD Students',
+      'alumniPage.masters': 'Master Students',
+      'alumniPage.undergrad': 'Undergraduates',
+      'alumniPage.visiting': 'Visiting Students',
       'alumniPage.intro': 'OpenMOSS Lab takes pride in having trained many excellent researchers and engineers. Our alumni span academia and industry, playing important roles in top institutions and companies worldwide.',
       'alumniPage.academia.title': 'Academia',
       'alumniPage.academia.desc': 'Our alumni hold faculty positions or pursue further studies at world-class universities including MIT, Stanford, UC Berkeley, CMU, Tsinghua University, and Peking University.',
@@ -412,6 +433,7 @@
       'alumniPage.network.item3': 'Share experiences and career advice with current students',
       'alumniPage.network.item4': 'Engage in collaborative research and industry-academia partnerships',
       'alumniPage.network.contact': 'To update your contact information or learn about alumni activities, please contact: <a href="mailto:xpqiu@fudan.edu.cn">xpqiu@fudan.edu.cn</a>',
+      'alumniPage.backPeople': 'View Team Members',
       'alumniPage.backHome': 'Back to Home',
 
       // Positions Page
