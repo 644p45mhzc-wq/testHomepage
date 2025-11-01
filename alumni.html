@@ -10,39 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-gO9FwZP1781OeR3SiPtK0aGpG99nmHn7+O+kO5RAwOB1p5MNDoAuCEi0aKBslZx2drXr/7L0KleKX2ND/qY1KQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    /* Scoped adjustments for alumni directory layout */
-    /* Align content left edge with index.html "构" character position */
-    /* Ensure exact same alignment as index.html hero section */
-    #alumni-main.container {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      margin-left: auto;
-      margin-right: auto;
-      width: min(1100px, calc(100% - 40px));
-    }
-    /* Remove any margin from breadcrumb that might cause offset */
-    #alumni-main > nav[aria-label="Breadcrumb"] {
-      margin-left: 0;
-      padding-left: 0;
-    }
-    .alumni-list { display: grid; gap: 1px; margin-top: 12px; padding-left: 20px; }
-    .alumni-row { display: grid; grid-template-columns: 160px 1fr; gap: 20px; padding: 4px 0; font-size: 14px; }
-    .alumni-row .name { font-weight: 500; color: var(--text); }
-    .alumni-row .destination { color: var(--text-soft); }
-    .year-badge { display: inline-block; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 4px 10px; box-shadow: 0 4px 10px var(--shadow-color); }
-    /* Floating sidebar */
-    .toc-sidebar { position: fixed; right: 16px; top: 80px; width: 168px; max-height: calc(100vh - 120px); background: rgba(241, 245, 255, 0.95); border: 1px solid var(--border); border-radius: 12px; padding: 16px; z-index: 1000; overflow-y: auto; box-shadow: 0 8px 20px rgba(14, 65, 156, 0.15); }
-    .toc-sidebar h3 { margin: 0 0 10px; font-size: 16px; color: var(--fudan-blue); font-weight: 500; }
-    .toc-links { display: grid; gap: 8px; }
-    .toc-links a { display: block; text-align: left; background: none; border: none; padding: 8px 0; color: var(--fudan-blue); font-weight: 400; }
-    .toc-links a:hover { background: rgba(14, 65, 156, 0.1); border-radius: 4px; }
-    .back-to-top { display: block; width: 100%; margin-bottom: 16px; background: var(--fudan-blue); color: var(--white); border: none; padding: 10px; border-radius: 6px; font-size: 14px; cursor: pointer; }
-    .back-to-top:hover { background: var(--fudan-blue-dark); }
-    @media (max-width: 1200px) { .toc-sidebar { display: none; } }
-    /* Prevent fixed navbar from covering anchors */
-    h2[id], h3.year-badge { scroll-margin-top: 110px; }
-  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -74,142 +41,44 @@
   </nav>
 
   <main>
-    <section id="alumni-main" class="container sec" style="padding-top: 40px;">
-      <nav aria-label="Breadcrumb" style="margin-bottom: 12px; font-size: 14px;">
-        <a href="index.html" data-i18n="breadcrumb.home">首页</a>
+    <section id="alumni-main" class="container sec">
+      <nav aria-label="Breadcrumb" class="alumni-breadcrumb">
+        <a href="index.html" data-i18n="alumniPage.breadcrumb.home">首页</a>
         <span style="opacity:.6;"> / </span>
-        <a href="people.html" data-i18n="breadcrumb.people">团队成员</a>
+        <a href="people.html" data-i18n="alumniPage.breadcrumb.people">团队成员</a>
         <span style="opacity:.6;"> / </span>
-        <span data-i18n="breadcrumb.alumni"><strong>校友介绍</strong></span>
+        <span data-i18n="alumniPage.breadcrumb.alumni"><strong>校友介绍</strong></span>
       </nav>
 
       <aside class="toc-sidebar" aria-label="快速导航">
-        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">回到顶部</button>
-        <h3>目录</h3>
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" data-i18n="alumniPage.backToTop">回到顶部</button>
+        <h3 data-i18n="alumniPage.toc">目录</h3>
         <div class="toc-links">
-          <a href="#postdocs">博士后</a>
-          <a href="#phd">博士生</a>
-          <a href="#masters">硕士生</a>
-          <a href="#undergrad">本科生</a>
-          <a href="#visiting">访问学生</a>
+          <a href="#postdocs" data-i18n="alumniPage.postdocs">博士后</a>
+          <a href="#phd" data-i18n="alumniPage.phd">博士生</a>
+          <a href="#masters" data-i18n="alumniPage.masters">硕士生</a>
+          <a href="#undergrad" data-i18n="alumniPage.undergrad">本科生</a>
+          <a href="#visiting" data-i18n="alumniPage.visiting">访问学生</a>
         </div>
       </aside>
 
       <!-- Categorized Alumni Directory -->
-      <section class="alumni-dir" aria-label="按类别的校友名录" style="margin-top: 24px;">
+      <section class="alumni-dir" aria-label="按类别的校友名录">
 
-        <h2 id="postdocs" class="section-subtitle">博士后</h2>
+        <h2 id="postdocs" class="section-subtitle" data-i18n="alumniPage.postdocs">博士后</h2>
         <div class="alumni-list"></div>
 
-        <h2 id="phd" class="section-subtitle">博士生</h2>
-        <div class="alumni-list">
-          <div class="alumni-row"><span class="name">陈新驰</span><span class="destination">爱丁堡大学博后</span></div>
-          <div class="alumni-row"><span class="name">龚经经</span><span class="destination">腾讯</span></div>
-          <div class="alumni-row"><span class="name">郭琦鹏</span><span class="destination">AWS</span></div>
-          <div class="alumni-row"><span class="name">李林阳</span><span class="destination">上海人工智能实验室</span></div>
-          <div class="alumni-row"><span class="name">李孝男</span><span class="destination">USA Startup</span></div>
-          <div class="alumni-row"><span class="name">李世民</span><span class="destination">模思</span></div>
-          <div class="alumni-row"><span class="name">刘鹏飞</span><span class="destination">CMU博后</span></div>
-          <div class="alumni-row"><span class="name">刘向阳</span><span class="destination">创业</span></div>
-          <div class="alumni-row"><span class="name">孙天祥</span><span class="destination">创业</span></div>
-          <div class="alumni-row"><span class="name">颜航</span><span class="destination">上海人工智能实验室</span></div>
-          <div class="alumni-row"><span class="name">郑逸宁</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">周云华</span><span class="destination">上海人工智能实验</span></div>
-        </div>
+        <h2 id="phd" class="section-subtitle" data-i18n="alumniPage.phd">博士生</h2>
+        <div class="alumni-list"></div>
 
-        <h2 id="masters" class="section-subtitle" style="margin-top: 24px;">硕士生</h2>
-        <div class="alumni-list">
-          <div class="alumni-row"><span class="name">安晨鑫</span><span class="destination">香港大学，PHD</span></div>
-          <div class="alumni-row"><span class="name">曹零</span><span class="destination">阿里</span></div>
-          <div class="alumni-row"><span class="name">常成</span><span class="destination">模思</span></div>
-          <div class="alumni-row"><span class="name">陈科宇</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">陈俊坤</span><span class="destination">Oregon State University, PHD</span></div>
-          <div class="alumni-row"><span class="name">陈怡然</span><span class="destination">字节</span></div>
-          <div class="alumni-row"><span class="name">陈云涛</span><span class="destination">上海电网</span></div>
-          <div class="alumni-row"><span class="name">陈丹露</span><span class="destination">UCSD, PHD</span></div>
-          <div class="alumni-row"><span class="name">陈楷予</span><span class="destination">UC Berkeley, MS</span></div>
-          <div class="alumni-row"><span class="name">戴宁</span><span class="destination">OSU, PHD</span></div>
-          <div class="alumni-row"><span class="name">范子越</span><span class="destination">字节</span></div>
-          <div class="alumni-row"><span class="name">傅健</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">耿志超</span><span class="destination">AWS</span></div>
-          <div class="alumni-row"><span class="name">何俊亮</span><span class="destination">字节</span></div>
-          <div class="alumni-row"><span class="name">洪嘉伟</span><span class="destination">上海人工智能实验室</span></div>
-          <div class="alumni-row"><span class="name">胡先念</span><span class="destination">阿里</span></div>
-          <div class="alumni-row"><span class="name">胡志峰</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">黄超超</span><span class="destination">上汽</span></div>
-          <div class="alumni-row"><span class="name">黄璐瑶</span><span class="destination">拼多多</span></div>
-          <div class="alumni-row"><span class="name">籍佗</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">姜经翔</span><span class="destination">华为</span></div>
-          <div class="alumni-row"><span class="name">蒋昊</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">蒋子恒</span><span class="destination">University of Washington, PHD</span></div>
-          <div class="alumni-row"><span class="name">柯震</span><span class="destination">小米</span></div>
-          <div class="alumni-row"><span class="name">李鹏</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">梁建泽</span><span class="destination">微软</span></div>
-          <div class="alumni-row"><span class="name">林泽辉</span><span class="destination">字节</span></div>
-          <div class="alumni-row"><span class="name">林天扬</span><span class="destination">阿里</span></div>
-          <div class="alumni-row"><span class="name">刘腾霄</span><span class="destination">UCSB，PHD</span></div>
-          <div class="alumni-row"><span class="name">刘毅韬</span><span class="destination">optiver</span></div>
-          <div class="alumni-row"><span class="name">刘枭雄</span><span class="destination">京东</span></div>
-          <div class="alumni-row"><span class="name">钱鹏</span><span class="destination">MIT, PHD</span></div>
-          <div class="alumni-row"><span class="name">权国风</span><span class="destination">阿里</span></div>
-          <div class="alumni-row"><span class="name">任可</span><span class="destination">字节</span></div>
-          <div class="alumni-row"><span class="name">施展</span><span class="destination">Queen University, PHD</span></div>
-          <div class="alumni-row"><span class="name">宋德敏</span><span class="destination">字节</span></div>
-          <div class="alumni-row"><span class="name">苏津岳</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">孙付</span><span class="destination">阿里</span></div>
-          <div class="alumni-row"><span class="name">孙驰</span><span class="destination">腾讯</span></div>
-          <div class="alumni-row"><span class="name">孙瑜</span><span class="destination">上海人工智能实验室</span></div>
-          <div class="alumni-row"><span class="name">汤琼</span><span class="destination">日行迹</span></div>
-          <div class="alumni-row"><span class="name">田乐</span><span class="destination">微软</span></div>
-          <div class="alumni-row"><span class="name">王丹青</span><span class="destination">字节</span></div>
-          <div class="alumni-row"><span class="name">王少敬</span><span class="destination">拼多多</span></div>
-          <div class="alumni-row"><span class="name">王阳刚</span><span class="destination">循环智能</span></div>
-          <div class="alumni-row"><span class="name">吴嘉文</span><span class="destination">世纪前沿资产</span></div>
-          <div class="alumni-row"><span class="name">吴玲玲</span><span class="destination">optiver</span></div>
-          <div class="alumni-row"><span class="name">吴世宇</span><span class="destination">百度</span></div>
-          <div class="alumni-row"><span class="name">徐嘉诚</span><span class="destination">UT Austin, PHD</span></div>
-          <div class="alumni-row"><span class="name">许一格</span><span class="destination">NTU Singapore, PHD</span></div>
-          <div class="alumni-row"><span class="name">杨建强</span><span class="destination">阿里</span></div>
-          <div class="alumni-row"><span class="name">杨小珪</span><span class="destination">上海人工智能实验室</span></div>
-          <div class="alumni-row"><span class="name">杨永祎</span><span class="destination">University of Michigan, PHD</span></div>
-          <div class="alumni-row"><span class="name">杨雨晴</span><span class="destination">USC，PHD</span></div>
-          <div class="alumni-row"><span class="name">尹留松</span><span class="destination">华为</span></div>
-          <div class="alumni-row"><span class="name">张栋</span><span class="destination">小米</span></div>
-          <div class="alumni-row"><span class="name">张墨执</span><span class="destination">字节</span></div>
-          <div class="alumni-row"><span class="name">张硕</span><span class="destination">创业</span></div>
-          <div class="alumni-row"><span class="name">张硕闻</span><span class="destination">蚂蚁</span></div>
-          <div class="alumni-row"><span class="name">张啸天</span><span class="destination">创业</span></div>
-          <div class="alumni-row"><span class="name">张鑫</span><span class="destination">小米</span></div>
-          <div class="alumni-row"><span class="name">赵嘉亿</span><span class="destination">Google</span></div>
-          <div class="alumni-row"><span class="name">郑彦俊</span><span class="destination">蚂蚁</span></div>
-          <div class="alumni-row"><span class="name">钟鸣</span><span class="destination">UIUC，PHD</span></div>
-          <div class="alumni-row"><span class="name">朱秦</span><span class="destination">阿里</span></div>
-          <div class="alumni-row"><span class="name">竺晨曦</span><span class="destination">百度</span></div>
-          <div class="alumni-row"><span class="name">宗一</span><span class="destination">蚂蚁</span></div>
-        </div>
+        <h2 id="masters" class="section-subtitle" data-i18n="alumniPage.masters">硕士生</h2>
+        <div class="alumni-list"></div>
 
-        <h2 id="undergrad" class="section-subtitle" style="margin-top: 24px;">本科生</h2>
-        <div class="alumni-list">
-          <div class="alumni-row"><span class="name">曹澍扬</span><span class="destination">Northeastern University, PHD</span></div>
-          <div class="alumni-row"><span class="name">常帅晨</span><span class="destination">Ohio State University, PHD</span></div>
-          <div class="alumni-row"><span class="name">陈丹露</span><span class="destination">UCSD, PHD</span></div>
-          <div class="alumni-row"><span class="name">陈楷予</span><span class="destination">UC Berkeley, MS</span></div>
-          <div class="alumni-row"><span class="name">戴宁</span><span class="destination">OSU, PHD</span></div>
-          <div class="alumni-row"><span class="name">胡志峰</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">蒋子恒</span><span class="destination">University of Washington, PHD</span></div>
-          <div class="alumni-row"><span class="name">裴恒志</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">苏津岳</span><span class="destination"></span></div>
-          <div class="alumni-row"><span class="name">徐嘉诚</span><span class="destination">UT Austin, PHD</span></div>
-          <div class="alumni-row"><span class="name">杨永祎</span><span class="destination">University of Michigan, PHD</span></div>
-        </div>
+        <h2 id="undergrad" class="section-subtitle" data-i18n="alumniPage.undergrad">本科生</h2>
+        <div class="alumni-list"></div>
 
-        <h2 id="visiting" class="section-subtitle" style="margin-top: 24px;">访问学生</h2>
-        <div class="alumni-list">
-          <div class="alumni-row"><span class="name">胡明昊</span><span class="destination">国防科技大学</span></div>
-          <div class="alumni-row"><span class="name">阚志刚</span><span class="destination">国防科技大学</span></div>
-          <div class="alumni-row"><span class="name">王永</span><span class="destination">香港大学</span></div>
-          <div class="alumni-row"><span class="name">郑人杰</span><span class="destination">同济大学</span></div>
-        </div>
+        <h2 id="visiting" class="section-subtitle" data-i18n="alumniPage.visiting">访问学生</h2>
+        <div class="alumni-list"></div>
 
         <!-- 历史硕士/博士内容已并入上面的“硕士生/博士生”分组 -->
       </section>
@@ -261,6 +130,9 @@
     </div>
   </footer>
 
+  <!-- 必须先加载 data2.js，再加载 main.js 和 main2.js -->
+  <script src="assets/js/data2.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/main2.js"></script>
 </body>
 </html>
