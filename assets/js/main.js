@@ -126,7 +126,9 @@
       'join.positions': '开放职位',
       'join.contact': '联系邱教授',
 
-      'footer.address': '上海市徐汇区华发路699弄3号<br>上海市杨浦区淞沪路2005号2X号楼<br>中国',
+      'footer.address1': '上海市徐汇区华发路699弄3号',
+      'footer.address2': '上海市杨浦区淞沪路2005号2X号楼',
+      'footer.address3': '中国',
       'footer.affiliations': '合作单位',
       'footer.fudan': '复旦大学计算与智能创新学院',
       'footer.sii': '上海创智学院',
@@ -135,7 +137,7 @@
       'footer.software': '软件',
       'footer.career': '职业发展',
       'footer.archive': '档案',
-      'footer.copyright': '&copy; <span id="year"></span> OpenMOSS Lab. 设计灵感来自 Stanford CS224N.',
+      'footer.copyright': '&copy; <span id="year"></span> OpenMOSS Lab.',
 
       // People Page
       'peoplePage.title': '团队成员',
@@ -381,7 +383,9 @@
       'join.positions': 'Open positions',
       'join.contact': 'Contact Prof. Qiu',
 
-      'footer.address': '3 Lane 699, Huafa Road, Xuhui District<br>Building 2X, No. 2005 Songhu Road, Yangpu District<br>Shanghai, China',
+      'footer.address1': '3 Lane 699, Huafa Road, Xuhui District',
+      'footer.address2': 'Building 2X, No. 2005 Songhu Road, Yangpu District',
+      'footer.address3': 'Shanghai, China',
       'footer.affiliations': 'Affiliations',
       'footer.fudan': 'School of Computer Science and Innovation, Fudan University',
       'footer.sii': 'Shanghai Innovation Institute',
@@ -390,7 +394,7 @@
       'footer.software': 'Software',
       'footer.career': 'Career',
       'footer.archive': 'Archive',
-      'footer.copyright': '&copy; <span id="year"></span> OpenMOSS Lab. Designed with inspiration from Stanford CS224N.',
+      'footer.copyright': '&copy; <span id="year"></span> OpenMOSS Lab.',
 
       // People Page
       'peoplePage.title': 'People',
